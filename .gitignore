@@ -182,3 +182,5 @@ paket-files
 docsrc/content/license.md
 docsrc/content/release-notes.md
 .fake
+Content/tmp/
+Content/.fsdocs
