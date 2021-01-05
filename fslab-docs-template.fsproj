@@ -12,6 +12,7 @@
         <ExcludeFromPackage>
         Content/bin/**/*;
         Content/obj/**/*;
+        Content/style-imports
         </ExcludeFromPackage>
     </PropertyGroup>
     <ItemGroup>

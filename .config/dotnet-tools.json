@@ -7,6 +7,18 @@
       "commands": [
         "fake"
       ]
+    },
+    "excubo.webcompiler": {
+      "version": "2.6.0",
+      "commands": [
+        "webcompiler"
+      ]
+    },
+    "fsharp.formatting.commandtool": {
+      "version": "7.2.9",
+      "commands": [
+        "fsdocs"
+      ]
     }
   }
 }

@@ -1,0 +1,67 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,700');
+
+// Set your brand colors
+$colorWhite: #F0F2F4;
+$transparent: rgba(0,0,0,0);
+$fslabDarkMagenta: #3D1244;
+$fslabMagenta: #A00975;
+$fslabLightMagenta: #F99BDE;
+$fslabSapphire: #19657B;
+$fslabAquamarine: #438AFE;
+
+$primary: $fslabMagenta;
+
+// Update Bulma's global variables
+$family-sans-serif: "Nunito", sans-serif;
+
+//generated tooltips
+.fsdocs-tip {}
+
+//generated member lists
+.fsdocs-member-list {}
+
+//generated member names
+.fsdocs-member-name {}
+
+//generated tooltips for members
+.fsdocs-member-tooltip {}
+
+//generated xmldoc sections
+.fsdocs-xmldoc {}
+
+//generated entity lists
+.fsdocs-entity-list {}
+
+//generated exception lists
+.fsdocs-exception-list {}
+
+//the 'summary' section of an XML doc
+.fsdocs-summary {}
+
+//the 'remarks' section of an XML doc
+.fsdocs-remarks {}
+
+//the 'parameters' section of an XML doc
+.fsdocs-params {}
+
+//a 'parameter' section of an XML doc
+.fsdocs-param {}
+
+//a 'parameter' name of an XML doc
+.fsdocs-param-name {}
+
+//the 'returns' section of an XML doc
+.fsdocs-returns {}
+
+//the 'example' section of an XML doc
+.fsdocs-example {}
+
+//the 'notes' section of an XML doc
+.fsdocs-note {}
+
+//a paragraph of an XML doc
+.fsdocs-para {}
+
+@import "../../style-imports/bulma-0.9.1/bulma.sass";
+

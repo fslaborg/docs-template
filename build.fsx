@@ -1,5 +1,4 @@
 #r "paket:
-nuget FSharp.Core >= 5
 nuget BlackFox.Fake.BuildTask
 nuget Fake.Core.Target
 nuget Fake.Core.Process
@@ -42,9 +41,9 @@ let runDotNet cmd workingDir =
         Fake.DotNet.DotNet.exec (Fake.DotNet.DotNet.Options.withWorkingDirectory workingDir) cmd ""
     if result.ExitCode <> 0 then failwithf "'dotnet %s' failed in %s" cmd workingDir
 
+let withProjectRoot dir = __SOURCE_DIRECTORY__ @@ dir
 
 let clean = BuildTask.create "clean" [] {
-    let withProjectRoot dir = __SOURCE_DIRECTORY__ @@ dir
     [
         "bin"
         "obj"
@@ -53,4 +52,16 @@ let clean = BuildTask.create "clean" [] {
     |> Shell.cleanDirs
 }
 
-BuildTask.runOrDefaultWithArguments clean
+let compileSass = BuildTask.create "compileSass" [] {
+    !! "Content/docs/**/*.scss"
+    ++ "Content/docs/*.scss"
+    |> Seq.map withProjectRoot
+    |> Seq.iter (fun sassFile -> 
+        let targetFile = sassFile.Replace(".scss", ".css")
+        let cmd = sprintf "webcompiler %s %s" sassFile targetFile
+        printfn "[Sass]: Compiling %s --> %s" sassFile targetFile
+        runDotNet cmd (Path.getDirectory sassFile)
+    )
+}
+
+BuildTask.runOrDefaultWithArguments compileSass
