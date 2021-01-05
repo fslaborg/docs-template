@@ -32,13 +32,13 @@ open Fake.Tools.Git
 
 Target.initEnvironment ()
 
-let release = Fake.Core.ReleaseNotes.load ("RELEASE_NOTES.md")
+let release = ReleaseNotes.load ("RELEASE_NOTES.md")
 
 let version = SemVer.parse release.NugetVersion
 
 let runDotNet cmd workingDir =
     let result =
-        Fake.DotNet.DotNet.exec (Fake.DotNet.DotNet.Options.withWorkingDirectory workingDir) cmd ""
+        DotNet.exec (DotNet.Options.withWorkingDirectory workingDir) cmd ""
     if result.ExitCode <> 0 then failwithf "'dotnet %s' failed in %s" cmd workingDir
 
 let withProjectRoot dir = __SOURCE_DIRECTORY__ @@ dir
@@ -47,6 +47,10 @@ let clean = BuildTask.create "clean" [] {
     [
         "bin"
         "obj"
+        "Content/bin"
+        "Content/obj"
+        "Content/.fsdocs"
+        "Content/tmp"
     ]
     |> List.map withProjectRoot
     |> Shell.cleanDirs
@@ -64,4 +68,13 @@ let compileSass = BuildTask.create "compileSass" [] {
     )
 }
 
-BuildTask.runOrDefaultWithArguments compileSass
+let buildTestProject = BuildTask.create "buildTestProject" [clean] { 
+    !! "Content/*.fsproj"
+    |> Seq.iter (DotNet.build id)
+}
+
+let watchTestDocs = BuildTask.create "watchTestDocs" [clean; compileSass; buildTestProject] { 
+    runDotNet "fsdocs watch --eval --strict --clean --property Configuration=Release" "Content"
+}
+
+BuildTask.runOrDefaultWithArguments watchTestDocs

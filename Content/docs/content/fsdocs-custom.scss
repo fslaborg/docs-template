@@ -1,19 +1,42 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,700');
 
+body {
+    min-height: 100vh;
+  }
+
 // Set your brand colors
-$colorWhite: #F0F2F4;
 $transparent: rgba(0,0,0,0);
+
 $fslabDarkMagenta: #3D1244;
 $fslabMagenta: #A00975;
 $fslabLightMagenta: #F99BDE;
-$fslabSapphire: #19657B;
+$fslabRose: #D12F67; // rose
+$fslabLightRose: #ff9b9b; // light rose
+$fslabOrange: #d59a1b;
+$fslabLightOrange: #d2c572;
+$fslabDarkGreen:#6A9955;
+$fslabGreen: #44d57f; // green
+$fslabLightGreen: #c6ffdd; // light green
+$fslabDarkAquamarine: #2c5392; // light aquamarine
 $fslabAquamarine: #438AFE;
+$fslabLightAquamarine: #00d4ff; // light aquamarine
 
-$primary: $fslabMagenta;
+$fslightblue:#30B9DB;
+$fsdarkblue:#378BBA;
+
 
 // Update Bulma's global variables
 $family-sans-serif: "Nunito", sans-serif;
+
+$primary: $fslabMagenta;
+$dark: $fslabDarkMagenta;
+
+$link : $fslabMagenta;
+
+
+//Possible classes and elements to set styles for in FSharp.Formatting
+
 
 //generated tooltips
 .fsdocs-tip {}
@@ -63,5 +86,169 @@ $family-sans-serif: "Nunito", sans-serif;
 //a paragraph of an XML doc
 .fsdocs-para {}
 
+//The generated content
+#fsdocs-content table.pre,
+#fsdocs-content pre.fssnip,
+#fsdocs-content pre {
+    background-color: $fslabDarkMagenta;
+}
+
+//The search box
+#fsdocs-searchbox {
+    margin: 0 auto;
+}
+
+//The logo
+#fsdocs-logo {}
+
+//The navigation-bar
+#fsdocs-menu {
+    border-right: 1px solid $dark;
+    @media screen and (max-width: 768px) {
+        #fsdocs-menu {border:none}
+    }
+}
+
+//import bulma
 @import "../../style-imports/bulma-0.9.1/bulma.sass";
 
+.navbar-nav {
+    @extend .menu-list;
+}
+.nav-header {
+    @extend .menu-label;
+    list-style: none;
+    color: $primary;
+}
+
+.active {
+    @extend .is-active;
+}
+
+
+/*--------------------------------------------------------------------------
+  Formatting for F# code snippets
+/*--------------------------------------------------------------------------*/
+
+.fsdocs-param-name,
+.fsdocs-return-name {
+    font-weight: 600;
+}
+/* strings --- and stlyes for other string related formats */
+#fsdocs-content span.s {
+    color: $fslabOrange;
+}
+/* printf formatters */
+#fsdocs-content span.pf {
+    color: $fslabLightOrange;
+}
+/* escaped chars */
+#fsdocs-content span.e {
+    color: $fslabLightRose;
+}
+
+/* identifiers --- and styles for more specific identifier types */
+#fsdocs-content span.id {
+    color: $white;
+}
+/* module */
+#fsdocs-content span.m {
+    color: $fslabGreen;
+}
+/* reference type */
+#fsdocs-content span.rt {
+    color: $fslabGreen;
+}
+/* value type */
+#fsdocs-content span.vt {
+    color: $fslabGreen;
+}
+/* interface */
+#fsdocs-content span.if {
+    color: $fslabGreen;
+}
+/* type argument */
+#fsdocs-content span.ta {
+    color: $fslabGreen;
+}
+/* disposable */
+#fsdocs-content span.d {
+    color: $fslabLightGreen;
+}
+/* property */
+#fsdocs-content span.prop {
+    color: $fslabGreen;
+}
+/* punctuation */
+#fsdocs-content span.p {
+    color: $fslabGreen;
+}
+/* function */
+#fsdocs-content span.fn {
+    color: $fslabLightAquamarine;
+}
+/* active pattern */
+#fsdocs-content span.pat {
+    color: #4ec9b0;
+}
+/* union case */
+#fsdocs-content span.u {
+    color: $fslabGreen;
+}
+/* enumeration */
+#fsdocs-content span.e {
+    color: $fslabGreen;
+}
+/* keywords */
+#fsdocs-content span.k {
+    color: $fslabLightRose;
+}
+/* comment */
+#fsdocs-content span.c {
+    color: $fslabDarkGreen;
+}
+/* operators */
+#fsdocs-content span.o {
+    color: $fslabLightAquamarine;
+}
+/* numbers */
+#fsdocs-content span.n {
+    color: $fslabLightGreen;
+}
+/* line number */
+#fsdocs-content span.l {
+    color: #80b0b0;
+}
+/* mutable var or ref cell */
+#fsdocs-content span.v {
+    color: #d1d1d1;
+    font-weight: bold;
+}
+/* inactive code */
+#fsdocs-content span.inactive {
+    color: #808080;
+}
+/* preprocessor */
+#fsdocs-content span.prep {
+    color: #af75c1;
+}
+/* fsi output */
+#fsdocs-content span.fsi {
+    color: $white-bis;
+}
+
+/* tool tip */
+div.fsdocs-tip {
+    background: #475b5f;
+    border-radius: 4px;
+    font: 11pt 'Droid Sans', arial, sans-serif;
+    padding: 6px 8px 6px 8px;
+    display: none;
+    color: #d1d1d1;
+    pointer-events: none;
+}
+
+    div.fsdocs-tip code {
+        color: #d1d1d1;
+        font: 11pt 'Droid Sans', arial, sans-serif;
+    }
