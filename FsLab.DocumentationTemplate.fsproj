@@ -12,7 +12,12 @@
         <ExcludeFromPackage>
         Content/bin/**/*;
         Content/obj/**/*;
-        Content/style-imports
+        Content/style-imports/*;
+        Content/style-imports/**/*;
+        Content/output/*;
+        Content/output/**/*;
+        Content/Library.fs;
+        Content/project.fsproj;
         </ExcludeFromPackage>
     </PropertyGroup>
     <ItemGroup>

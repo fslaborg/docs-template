@@ -34,6 +34,9 @@ $dark: $fslabDarkMagenta;
 
 $link : $fslabMagenta;
 
+#fsdocs-content h1 a, #fsdocs-content h1 a:hover, #fsdocs-content h1 a:focus, #fsdocs-content h2 a, #fsdocs-content h2 a:hover, #fsdocs-content h2 a:focus, #fsdocs-content h3 a, #fsdocs-content h3 a:hover, #fsdocs-content h3 a:focus, #fsdocs-content h4 a, #fsdocs-content h4 a:hover, #fsdocs-content #fsdocs-content h4 a:focus, #fsdocs-content h5 a, #fsdocs-content h5 a:hover, #fsdocs-content h5 a:focus, #fsdocs-content h6 a, #fsdocs-content h6 a:hover, #fsdocs-content h6 a:focus {
+    color: $link;
+}
 
 //Possible classes and elements to set styles for in FSharp.Formatting
 

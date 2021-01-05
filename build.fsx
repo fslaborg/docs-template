@@ -47,6 +47,7 @@ let clean = BuildTask.create "clean" [] {
     [
         "bin"
         "obj"
+        "pkg"
         "Content/bin"
         "Content/obj"
         "Content/.fsdocs"
@@ -75,6 +76,38 @@ let buildTestProject = BuildTask.create "buildTestProject" [clean] {
 
 let watchTestDocs = BuildTask.create "watchTestDocs" [clean; compileSass; buildTestProject] { 
     runDotNet "fsdocs watch --eval --strict --clean --property Configuration=Release" "Content"
+}
+
+let pack = BuildTask.create "Pack" [clean; compileSass;] {
+    !! "./FsLab.DocumentationTemplate.fsproj"
+    |> Seq.iter (Fake.DotNet.DotNet.pack (fun p ->
+        let msBuildParams =
+            {p.MSBuildParams with 
+                Properties = ([
+                    "Version",(sprintf "%i.%i.%i" version.Major version.Minor version.Patch )
+                ] @ p.MSBuildParams.Properties
+                )
+            }
+        {
+            p with 
+                MSBuildParams = msBuildParams
+                OutputPath = Some "pkg"
+        }
+    ))
+}
+
+let uninstallTemplate =  BuildTask.create "uninstallTemplate" [] {
+    runDotNet "new -u FsLab.DocumentationTemplate" __SOURCE_DIRECTORY__
+}
+
+let installTemplate =  BuildTask.create "installTemplate" [pack] {
+    runDotNet 
+        (sprintf "new -i %s" (__SOURCE_DIRECTORY__ @@ (sprintf "pkg/FsLab.DocumentationTemplate.%i.%i.%i.nupkg" version.Major version.Minor version.Patch)))
+        __SOURCE_DIRECTORY__
+}
+
+let testTemplate =  BuildTask.create "testTemplate" [installTemplate] {
+    runDotNet "new fslab-docs" (__SOURCE_DIRECTORY__ @@ "tests")
 }
 
 BuildTask.runOrDefaultWithArguments watchTestDocs
