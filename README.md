@@ -25,4 +25,4 @@ Uninstall the template via
 
 Current WIP version:
 
-![](example.png)
+https://fslab.org/docs-template/
