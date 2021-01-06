@@ -187,3 +187,5 @@ Content/output/
 Content/.fsdocs
 pkg
 tests
+
+.ionide

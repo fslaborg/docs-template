@@ -17,7 +17,11 @@
         Content/output/*;
         Content/output/**/*;
         Content/Library.fs;
-        Content/project.fsproj;
+        Content/*.fsproj;
+        Content/docs/content/a*.fsx;
+        Content/docs/content/b*.fsx;
+        Content/docs/content/c*.fsx;
+        Content/.template.config/*;
         </ExcludeFromPackage>
     </PropertyGroup>
     <ItemGroup>
