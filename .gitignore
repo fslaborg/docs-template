@@ -183,8 +183,10 @@ docsrc/content/license.md
 docsrc/content/release-notes.md
 .fake
 Content/tmp/
+Content/output/
 Content/.fsdocs
 pkg
 tests
 
 .ionide
+
