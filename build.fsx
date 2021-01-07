@@ -112,14 +112,15 @@ let uninstallTestTemplate =  BuildTask.create "uninstallTestTemplate" [] {
 
 let installTestTemplate =  BuildTask.create "installTestTemplate" [pack] {
     runDotNet 
-        (sprintf "new -i %s" (__SOURCE_DIRECTORY__ @@ (sprintf "pkg/FsLab.DocumentationTemplate.%i.%i.%i.nupkg" version.Major version.Minor version.Patch)))
-        __SOURCE_DIRECTORY__
+        (sprintf "new -i FsLab.DocumentationTemplate.%i.%i.%i.nupkg" version.Major version.Minor version.Patch)
+        (__SOURCE_DIRECTORY__ @@ "pkg")
 }
 
 let runTestTemplate =  BuildTask.create "runTestTemplate" [installTestTemplate] {
+    Directory.ensure (__SOURCE_DIRECTORY__ @@ "tests")
     runDotNet "new fslab-docs" (__SOURCE_DIRECTORY__ @@ "tests")
 }
 
-let test = BuildTask.createEmpty "" [installTestTemplate; runTestTemplate; uninstallTestTemplate]
+let test = BuildTask.createEmpty "test" [installTestTemplate; runTestTemplate; uninstallTestTemplate]
 
 BuildTask.runOrDefaultWithArguments pack
