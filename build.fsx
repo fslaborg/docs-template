@@ -55,15 +55,23 @@ let clean = BuildTask.create "clean" [] {
     ]
     |> List.map withProjectRoot
     |> Shell.cleanDirs
+
+    [
+        "Content/docs/content/fsdocs-custom.min.css.gz"
+        "Content/docs/content/fsdocs-custom.min.css"
+        "Content/docs/content/fsdocs-custom.css"
+    ]
+    |> File.deleteAll
 }
 
-let compileSass = BuildTask.create "compileSass" [] {
+let compileSass = BuildTask.create "compileSass" [clean] {
     !! "Content/docs/**/*.scss"
     ++ "Content/docs/*.scss"
     |> Seq.map withProjectRoot
     |> Seq.iter (fun sassFile -> 
         let targetFile = sassFile.Replace(".scss", ".css")
-        let cmd = sprintf "webcompiler %s %s" sassFile targetFile
+        let configFile = withProjectRoot "webcompilerconfiguration.json"
+        let cmd = sprintf "webcompiler %s %s -c %s" sassFile targetFile configFile
         printfn "[Sass]: Compiling %s --> %s" sassFile targetFile
         runDotNet cmd (Path.getDirectory sassFile)
     )

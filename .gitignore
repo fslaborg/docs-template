@@ -184,6 +184,9 @@ docsrc/content/release-notes.md
 .fake
 Content/tmp/
 Content/output/
+Content/docs/content/fsdocs-custom.min.css.gz
+Content/docs/content/fsdocs-custom.min.css
+Content/docs/content/fsdocs-custom.css
 Content/.fsdocs
 pkg
 tests
