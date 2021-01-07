@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Some introduction will be here soon
+    <title>The fslab documentation template
 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="docs-template">
@@ -22,10 +22,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/JavaScript-autoComplete/1.0.4/auto-complete.css" />
     <!-- END SEARCH BOX: this adds support for the search box -->
 
-</head>
+</head> 
 
 <body>
-    <div class="columns mx-0 is-fullheight">
+    <div class="columns is-fullheight m-0">
         <div id="fsdocs-menu" class="column is-2 is-paddingless">
             <aside class="menu">
                 <div class="container is-paddingless is-marginless has-background-dark">
@@ -217,7 +217,62 @@
         <div class="column is-10 is-paddingless">
             <div class="section pt-4">
                 <div class="container" id="fsdocs-content">
-                    <h1><a name="Some-introduction-will-be-here-soon" class="anchor" href="#Some-introduction-will-be-here-soon">Some introduction will be here soon</a></h1>
+                    <h1><a name="The-fslab-documentation-template" class="anchor" href="#The-fslab-documentation-template">The fslab documentation template</a></h1>
+<p>This template scaffolds the necessary folder structure for FSharp.Formatting
+and adds custom styles in the fslab theme.</p>
+<h2><a name="Installation" class="anchor" href="#Installation">Installation</a></h2>
+<p>This template is available as a dotnet new template:</p>
+<table class="pre"><tr><td class="snippet"><pre class="fssnip"><code lang="no-highlight">dotnet new -i FsLab.DocumentationTemplate - 
+</code></pre></td></tr></table>
+<h2><a name="Usage" class="anchor" href="#Usage">Usage</a></h2>
+<p>in the root of your project that you want to write documentation for, run:</p>
+<table class="pre"><tr><td class="snippet"><pre class="fssnip"><code lang="no-highlight">dotnet new fslab-docs
+</code></pre></td></tr></table>
+<h2><a name="Quick-content-rundown" class="anchor" href="#Quick-content-rundown">Quick content rundown:</a></h2>
+<p>The template initializes the following folder structure when you initialize it in the root of your project:</p>
+<pre>
+docs
+│   index.fsx
+│   _template.html
+│
+├───content
+│       0_Markdown-Cheatsheet.md
+│       1_fsharp-code-example.fsx
+│       fsdocs-custom.css
+│       fsdocs-custom.min.css
+│
+├───img
+│       favicon.ico
+│       logo.png
+│
+└───reference
+        _template.html
+</pre>
+<ul>
+<li>
+<p><code>index.fsx</code> is the file you are reading just now. It contains the very content you are reading at the moment
+in a markdown block indicated by <code>(** *)</code> guards. It will be rendered as the root <code>index.html</code> file of your documentation.</p>
+</li>
+<li><p><code>_template.html</code> is the root html scaffold (sidebar to the left, script and style loading)</p></li>
+<li>
+<p>the <code>content</code> folder contains the following files:</p>
+<ul>
+<li>
+<p><code>0_Markdown-Cheatsheet.md</code> is a adaption of <a href="">this markdown cheat sheet</a> that shows how to write markdown and
+showcases the rendered equivalents. It can also be viewed in all its glory <a href="">here</a>.</p>
+</li>
+<li>
+<p><code>1_fsharp-code-example.fsx</code> is a script file that showcases the syntax highlighting style for F# snippets.
+It can also be viewed in all its glory <a href="">here</a>.</p>
+</li>
+<li><p><code>fsdocs-custom.css</code> and <code>fsdocs-custom.min.css</code> contain the custom styling that applies the fslab styles.</p></li>
+</ul>
+</li>
+<li><p>the <code>img</code> folder contains the fslab logo and favicon. replace these files (with the same names) to youse sours</p></li>
+<li><p><code>reference/_template.html</code> is a slightly adapted version of the template above for the API documentation</p></li>
+</ul>
+<h2><a name="Creating-new-content" class="anchor" href="#Creating-new-content">Creating new content</a></h2>
+<p>Please refer to the <a href="">FSharp.Formatting documentation</a>.</p>
 
                 </div>
             </div>

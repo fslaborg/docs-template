@@ -22,14 +22,14 @@ $fslabLightAquamarine: #00d4ff; // light aquamarine
 $fslightblue:#30B9DB;
 $fsdarkblue:#378BBA;
 
-
 // Update Bulma's global variables
 $family-sans-serif: "Nunito", sans-serif;
 
 // global bulma overrides
 $primary: $fslabMagenta;
 $dark: $fslabMagentaDarkest;
-//$link: $fsdarkblue;
+$link-hover: $fslabMagenta;
+$link: $fsdarkblue;
 
 // specific bulma overrides
 $divider-background-color: $fslabMagenta;
