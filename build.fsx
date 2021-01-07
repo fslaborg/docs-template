@@ -41,7 +41,7 @@ let runDotNet cmd workingDir =
         DotNet.exec (DotNet.Options.withWorkingDirectory workingDir) cmd ""
     if result.ExitCode <> 0 then failwithf "'dotnet %s' failed in %s" cmd workingDir
 
-let withProjectRoot dir = __SOURCE_DIRECTORY__ @@ dir
+//let withProjectRoot dir = __SOURCE_DIRECTORY__ @@ dir
 
 let clean = BuildTask.create "clean" [] {
     [
@@ -53,7 +53,6 @@ let clean = BuildTask.create "clean" [] {
         "Content/.fsdocs"
         "Content/tmp"
     ]
-    |> List.map withProjectRoot
     |> Shell.cleanDirs
 
     [
@@ -67,10 +66,9 @@ let clean = BuildTask.create "clean" [] {
 let compileSass = BuildTask.create "compileSass" [clean] {
     !! "Content/docs/**/*.scss"
     ++ "Content/docs/*.scss"
-    |> Seq.map withProjectRoot
     |> Seq.iter (fun sassFile -> 
         let targetFile = sassFile.Replace(".scss", ".css")
-        let configFile = withProjectRoot "webcompilerconfiguration.json"
+        let configFile = (__SOURCE_DIRECTORY__ + "/webcompilerconfiguration.json")
         let cmd = sprintf "webcompiler %s %s -c %s" sassFile targetFile configFile
         printfn "[Sass]: Compiling %s --> %s" sassFile targetFile
         runDotNet cmd (Path.getDirectory sassFile)

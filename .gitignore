@@ -190,6 +190,7 @@ Content/docs/content/fsdocs-custom.css
 Content/.fsdocs
 pkg
 tests
+gh-pages
 
 .ionide
 
