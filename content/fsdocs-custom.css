@@ -8962,7 +8962,8 @@ em {
           margin-inline-start: 40px;
   -webkit-margin-end: 40px;
           margin-inline-end: 40px;
-  background-color: whitesmoke; }
+  background-color: whitesmoke;
+  border-left: 4px solid #A00975; }
 
 #fsdocs-content table.pre, #fsdocs-content pre.fssnip, #fsdocs-content pre {
   background-color: #200117;
@@ -9002,6 +9003,80 @@ em {
 /*--------------------------------------------------------------------------
   Formatting for F# code snippets
 /*--------------------------------------------------------------------------*/
+.fsdocs-param-name,
+.fsdocs-return-name {
+  font-weight: 600; }
+
+/* strings --- and stlyes for other string related formats */
+#fsdocs-content span.s {
+  color: #d59a1b; }
+
+/* printf formatters */
+#fsdocs-content span.pf {
+  color: #A00975; }
+
+/* identifiers --- and styles for more specific identifier types */
+#fsdocs-content span.id {
+  color: white; }
+
+/* module */
+#fsdocs-content span.m {
+  color: #44d57f; }
+
+/* reference type */
+#fsdocs-content span.rt {
+  color: #44d57f; }
+
+/* value type */
+#fsdocs-content span.vt {
+  color: #44d57f; }
+
+/* interface */
+#fsdocs-content span.if {
+  color: #44d57f; }
+
+/* type argument */
+#fsdocs-content span.ta {
+  color: #44d57f; }
+
+/* disposable */
+#fsdocs-content span.d {
+  color: #c6ffdd; }
+
+#fsdocs-content span.fn {
+  color: #d2c572; }
+
+/* active pattern */
+#fsdocs-content span.pat {
+  color: #438AFE; }
+
+/* union case */
+#fsdocs-content span.u {
+  color: #44d57f; }
+
+/* enumeration */
+#fsdocs-content span.e {
+  color: #44d57f; }
+
+/* keywords */
+#fsdocs-content span.k {
+  color: #F99BDE; }
+
+/* comment */
+#fsdocs-content span.c {
+  color: #6A9955; }
+
+#fsdocs-content span.o {
+  color: #D12F67; }
+
+/* numbers */
+#fsdocs-content span.n {
+  color: #c6ffdd; }
+
+/* fsi output */
+#fsdocs-content span.fsi {
+  color: #fafafa; }
+
 /* tool tip */
 div.fsdocs-tip {
   background: #475b5f;

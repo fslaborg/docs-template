@@ -196,6 +196,7 @@ table {
     margin-inline-start: 40px;
     margin-inline-end: 40px;
     background-color: $white-ter;
+    border-left: 4px solid $primary;
 }
 
 #fsdocs-content table.pre, #fsdocs-content pre.fssnip, #fsdocs-content pre {
@@ -259,112 +260,85 @@ table {
   Formatting for F# code snippets
 /*--------------------------------------------------------------------------*/
 
-// .fsdocs-param-name,
-// .fsdocs-return-name {
-//     font-weight: 600;
-// }
-// /* strings --- and stlyes for other string related formats */
-// #fsdocs-content span.s {
-//     color: $fslabOrange;
-// }
-// /* printf formatters */
-// #fsdocs-content span.pf {
-//     color: $fslabLightOrange;
-// }
-// /* escaped chars */
-// #fsdocs-content span.e {
-//     color: $fslabLightRose;
-// }
+.fsdocs-param-name,
+.fsdocs-return-name {
+    font-weight: 600;
+}
+/* strings --- and stlyes for other string related formats */
+#fsdocs-content span.s {
+    color: $fslabOrange;
+}
+/* printf formatters */
+#fsdocs-content span.pf {
+    color: $primary ;
+}
 
-// /* identifiers --- and styles for more specific identifier types */
-// #fsdocs-content span.id {
-//     color: $white;
-// }
-// /* module */
-// #fsdocs-content span.m {
-//     color: $fslabGreen;
-// }
-// /* reference type */
-// #fsdocs-content span.rt {
-//     color: $fslabGreen;
-// }
-// /* value type */
-// #fsdocs-content span.vt {
-//     color: $fslabGreen;
-// }
-// /* interface */
-// #fsdocs-content span.if {
-//     color: $fslabGreen;
-// }
-// /* type argument */
-// #fsdocs-content span.ta {
-//     color: $fslabGreen;
-// }
-// /* disposable */
-// #fsdocs-content span.d {
-//     color: $fslabLightGreen;
-// }
-// /* property */
-// #fsdocs-content span.prop {
-//     color: $fslabGreen;
-// }
-// /* punctuation */
-// #fsdocs-content span.p {
-//     color: $fslabGreen;
-// }
+/* identifiers --- and styles for more specific identifier types */
+#fsdocs-content span.id {
+    color: $white;
+}
+/* module */
+#fsdocs-content span.m {
+    color: $fslabGreen;
+}
+/* reference type */
+#fsdocs-content span.rt {
+    color: $fslabGreen;
+}
+/* value type */
+#fsdocs-content span.vt {
+    color: $fslabGreen;
+}
+/* interface */
+#fsdocs-content span.if {
+    color: $fslabGreen;
+}
+/* type argument */
+#fsdocs-content span.ta {
+    color: $fslabGreen;
+}
+/* disposable */
+#fsdocs-content span.d {
+    color: $fslabLightGreen;
+}
+
 // /* function */
-// #fsdocs-content span.fn {
-//     color: $fslabLightAquamarine;
-// }
-// /* active pattern */
-// #fsdocs-content span.pat {
-//     color: #4ec9b0;
-// }
-// /* union case */
-// #fsdocs-content span.u {
-//     color: $fslabGreen;
-// }
-// /* enumeration */
-// #fsdocs-content span.e {
-//     color: $fslabGreen;
-// }
-// /* keywords */
-// #fsdocs-content span.k {
-//     color: $fslabLightRose;
-// }
-// /* comment */
-// #fsdocs-content span.c {
-//     color: $fslabDarkGreen;
-// }
+#fsdocs-content span.fn {
+    color: $fslabLightOrange;
+}
+/* active pattern */
+#fsdocs-content span.pat {
+    color: $fslabAquamarine;
+}
+/* union case */
+#fsdocs-content span.u {
+    color: $fslabGreen;
+}
+/* enumeration */
+#fsdocs-content span.e {
+    color: $fslabGreen;
+}
+/* keywords */
+#fsdocs-content span.k {
+    color: $fslabLightMagenta;
+}
+/* comment */
+#fsdocs-content span.c {
+    color: $fslabDarkGreen;
+}
 // /* operators */
-// #fsdocs-content span.o {
-//     color: $fslabLightAquamarine;
-// }
-// /* numbers */
-// #fsdocs-content span.n {
-//     color: $fslabLightGreen;
-// }
-// /* line number */
-// #fsdocs-content span.l {
-//     color: #80b0b0;
-// }
-// /* mutable var or ref cell */
-// #fsdocs-content span.v {
-//     color: #d1d1d1;
-//     font-weight: bold;
-// }
-// /* inactive code */
-// #fsdocs-content span.inactive {
-//     color: #808080;
-// }
-// /* preprocessor */
-// #fsdocs-content span.prep {
-//     color: #af75c1;
-// }
-// /* fsi output */
-// #fsdocs-content span.fsi {
-//     color: $white-bis;
-// }
+#fsdocs-content span.o {
+    color: $fslabRose;
+}
+/* numbers */
+#fsdocs-content span.n {
+    color: $fslabLightGreen;
+}
+
+/* fsi output */
+#fsdocs-content span.fsi {
+    color: $white-bis;
+}
 
 /* tool tip */
 div.fsdocs-tip {
