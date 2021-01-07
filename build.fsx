@@ -82,8 +82,12 @@ let buildTestProject = BuildTask.create "buildTestProject" [clean] {
     |> Seq.iter (DotNet.build id)
 }
 
-let watch = BuildTask.create "watch" [clean; compileSass; buildTestProject] { 
+let watchExampleDocs = BuildTask.create "watchExampleDocs" [clean; compileSass; buildTestProject] { 
     runDotNet "fsdocs watch --eval --strict --clean --property Configuration=Release" "Content"
+}
+
+let buildExampleDocs = BuildTask.create "buildExampleDocs" [clean; compileSass; buildTestProject] { 
+    runDotNet "fsdocs build --eval --strict --clean --property Configuration=Release --output ../gh-pages" "Content"
 }
 
 let pack = BuildTask.create "Pack" [clean; compileSass;] {
