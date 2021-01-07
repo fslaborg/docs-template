@@ -48,6 +48,7 @@ let clean = BuildTask.create "clean" [] {
         "bin"
         "obj"
         "pkg"
+        "tests"
         "Content/bin"
         "Content/obj"
         "Content/.fsdocs"
