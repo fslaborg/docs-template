@@ -1,6 +1,13 @@
 # fslab documentation template
 
-`dotnet new` template setting up the necessary folder structure for [FSharp.Formatting]() and using the fslab color scheme.
+`dotnet new` template setting up the necessary folder structure and files for [FSharp.Formatting]() documentation. It uses a fslab color scheme.
+
+## How does it look like?
+
+The current version is live on gh-pages:
+
+https://fslab.org/docs-template/
+
 
 ## Use
 
@@ -8,21 +15,23 @@ WIP
 
 ## Develop
 
-To start fsdocs in watcher mode for the test project:
-`dotnet tool restore`
-`dotnet fake build`
+Build the template nuget package: 
 
-To test the template package intallation and check correct contents of an initialized template:
-`dotnet tool restore`
-`dotnet fake build -t testTemplate`
+`build.cmd` (Win)
+
+`build.sh` (Mac/Linux)
+
+Start fsdocs in watcher mode for the test project:
+
+`build.cmd -t watch` (Win)
+
+`build.sh -t watch` (Mac/Linux)
+
+Test the template package intallation and check correct contents of an initialized template:
+
+`build.cmd -t test` (Win)
+
+`build.cmd -t test` (Mac/Linux)
 
 will create the template output in the `tests` folder.
 
-Uninstall the template via
-`dotnet fake build -t uninstallTemplate`
-
-## How does it look like?
-
-Current WIP version:
-
-https://fslab.org/docs-template/
