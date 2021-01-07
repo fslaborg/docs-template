@@ -23,9 +23,9 @@ Build the template nuget package:
 
 Start fsdocs in watcher mode for the test project:
 
-`build.cmd -t watch` (Win)
+`build.cmd -t watchExampleDocs` (Win)
 
-`build.sh -t watch` (Mac/Linux)
+`build.sh -t watchExampleDocs` (Mac/Linux)
 
 Test the template package intallation and check correct contents of an initialized template:
 

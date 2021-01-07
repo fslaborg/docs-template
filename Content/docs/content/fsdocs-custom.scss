@@ -29,10 +29,14 @@ $family-sans-serif: "Nunito", sans-serif;
 // global bulma overrides
 $primary: $fslabMagenta;
 $dark: $fslabMagentaDarkest;
-$link : $fslabMagenta;
+//$link: $fsdarkblue;
 
 // specific bulma overrides
 $divider-background-color: $fslabMagenta;
+$table-cell-border: 1px solid $dark;
+$table-head-cell-color: $primary;
+$table-cell-heading-color: $primary;
+
 
 //import bulma
 @import "../../style-imports/bulma-0.9.1/bulma.sass";
@@ -87,13 +91,6 @@ $divider-background-color: $fslabMagenta;
 //a paragraph of an XML doc
 .fsdocs-para {}
 
-// //The generated content
-// #fsdocs-content table.pre,
-// #fsdocs-content pre.fssnip,
-// #fsdocs-content pre {
-//     background-color: $fslabDarkMagenta;
-// }
-
 //The search box
 #fsdocs-searchbox {
     margin: 0 auto;
@@ -143,7 +140,7 @@ $divider-background-color: $fslabMagenta;
 #fsdocs-content h4 a, #fsdocs-content h4 a:hover, #fsdocs-content h4 a:focus, 
 #fsdocs-content h5 a, #fsdocs-content h5 a:hover, #fsdocs-content h5 a:focus, 
 #fsdocs-content h6 a, #fsdocs-content h6 a:hover, #fsdocs-content h6 a:focus {
-    color: $link;
+    color: $primary;
 }
 
 #fsdocs-content p {
@@ -179,7 +176,7 @@ em {
 }
 
 table {
-    @extend .table;
+    @extend .table, .is-striped;
 }
 
 #fsdocs-content ul {
@@ -215,7 +212,48 @@ table {
     // border-radius: 5px;
     // color: #d1d1d1;
     // max-width: none;
+    overflow-x: auto;
+    display:block;
 }
+
+#fsdocs-menu::-webkit-scrollbar{
+    width: 1px;
+}
+
+#fsdocs-menu::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: $dark;
+}
+
+#fsdocs-content table.pre::-webkit-scrollbar-track, 
+#fsdocs-content pre.fssnip ::-webkit-scrollbar-track, 
+#fsdocs-content pre ::-webkit-scrollbar-track
+{
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    background-color: $dark;
+}
+
+#fsdocs-content table.pre::-webkit-scrollbar, 
+#fsdocs-content pre.fssnip ::-webkit-scrollbar, 
+#fsdocs-content pre ::-webkit-scrollbar
+{
+    height: 8px;
+    background-color: $dark;
+    border-radius:5px
+}
+
+#fsdocs-content table.pre::-webkit-scrollbar-thumb, 
+#fsdocs-content pre.fssnip ::-webkit-scrollbar-thumb, 
+#fsdocs-content pre ::-webkit-scrollbar-thumb
+{
+    border-radius: 5px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: $primary;
+}
+
 
 /*--------------------------------------------------------------------------
   Formatting for F# code snippets

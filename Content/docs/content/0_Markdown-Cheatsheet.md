@@ -249,7 +249,7 @@ However, there is way better syntax highlighting and also tooltips available for
 
 ## Tables
 
-Tables aren't part of the core Markdown spec, but FSharp.Formatting supports them. Tables are styled via the default bulma table style.
+Tables aren't part of the core Markdown spec, but FSharp.Formatting supports them. Tables are styled via bulma striped table style.
 
 ```no-highlight
 Colons can be used to align columns.
