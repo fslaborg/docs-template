@@ -1,0 +1,383 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,700');
+
+// Set your brand colors
+$transparent: rgba(0,0,0,0);
+
+$fslabMagentaDarkest: #200117;
+$fslabDarkMagenta: #3D1244;
+$fslabMagenta: #A00975;
+$fslabLightMagenta: #F99BDE;
+$fslabRose: #D12F67; // rose
+$fslabLightRose: #ff9b9b; // light rose
+$fslabOrange: #d59a1b;
+$fslabLightOrange: #d2c572;
+$fslabDarkGreen:#6A9955;
+$fslabGreen: #44d57f; // green
+$fslabLightGreen: #c6ffdd; // light green
+$fslabDarkAquamarine: #2c5392; // light aquamarine
+$fslabAquamarine: #438AFE;
+$fslabLightAquamarine: #00d4ff; // light aquamarine
+
+$fslightblue:#30B9DB;
+$fsdarkblue:#378BBA;
+
+
+// Update Bulma's global variables
+$family-sans-serif: "Nunito", sans-serif;
+
+// global bulma overrides
+$primary: $fslabMagenta;
+$dark: $fslabMagentaDarkest;
+//$link: $fsdarkblue;
+
+// specific bulma overrides
+$divider-background-color: $fslabMagenta;
+$table-cell-border: 1px solid $dark;
+$table-head-cell-color: $primary;
+$table-cell-heading-color: $primary;
+
+
+//import bulma
+@import "../../style-imports/bulma-0.9.1/bulma.sass";
+
+//Possible classes and elements to set styles for in FSharp.Formatting
+
+//generated tooltips
+.fsdocs-tip {}
+
+//generated member lists
+.fsdocs-member-list {}
+
+//generated member names
+.fsdocs-member-name {}
+
+//generated tooltips for members
+.fsdocs-member-tooltip {}
+
+//generated xmldoc sections
+.fsdocs-xmldoc {}
+
+//generated entity lists
+.fsdocs-entity-list {}
+
+//generated exception lists
+.fsdocs-exception-list {}
+
+//the 'summary' section of an XML doc
+.fsdocs-summary {}
+
+//the 'remarks' section of an XML doc
+.fsdocs-remarks {}
+
+//the 'parameters' section of an XML doc
+.fsdocs-params {}
+
+//a 'parameter' section of an XML doc
+.fsdocs-param {}
+
+//a 'parameter' name of an XML doc
+.fsdocs-param-name {}
+
+//the 'returns' section of an XML doc
+.fsdocs-returns {}
+
+//the 'example' section of an XML doc
+.fsdocs-example {}
+
+//the 'notes' section of an XML doc
+.fsdocs-note {}
+
+//a paragraph of an XML doc
+.fsdocs-para {}
+
+//The search box
+#fsdocs-searchbox {
+    margin: 0 auto;
+}
+
+//The logo
+#fsdocs-logo {}
+
+//The navigation-bar
+#fsdocs-menu {
+    @media screen and (min-width: 768px) {
+        border-right: 1px solid $dark;
+        position: sticky;
+        display: inline-block;
+        vertical-align: top;
+        height: 100vh;
+        top: 0;
+        bottom: 0;
+        overflow-y: auto;
+        background-color: $white-ter;
+    }
+    @media screen and (max-width: 768px) {
+        #fsdocs-menu {border:none};
+        background-color: $grey-lightest;
+    }
+}
+
+
+
+.navbar-nav {
+    @extend .menu-list;
+}
+.nav-header {
+    @extend .menu-label;
+    list-style: none;
+    color: $primary;
+}
+
+.active {
+    @extend .is-active;
+}
+
+
+#fsdocs-content h1 a, #fsdocs-content h1 a:hover, #fsdocs-content h1 a:focus,
+#fsdocs-content h2 a, #fsdocs-content h2 a:hover, #fsdocs-content h2 a:focus, 
+#fsdocs-content h3 a, #fsdocs-content h3 a:hover, #fsdocs-content h3 a:focus, 
+#fsdocs-content h4 a, #fsdocs-content h4 a:hover, #fsdocs-content h4 a:focus, 
+#fsdocs-content h5 a, #fsdocs-content h5 a:hover, #fsdocs-content h5 a:focus, 
+#fsdocs-content h6 a, #fsdocs-content h6 a:hover, #fsdocs-content h6 a:focus {
+    color: $primary;
+}
+
+#fsdocs-content p {
+    @extend .my-2
+}
+
+#fsdocs-content h1 a {
+    border-bottom: 8px solid $dark;
+}
+#fsdocs-content h2 a {
+    border-bottom: 5px solid $dark;
+}
+#fsdocs-content h3 a,
+#fsdocs-content h4 a {
+    border-bottom: 2px solid $dark;
+}
+
+#fsdocs-content h5 a,
+#fsdocs-content h6 a {
+    border-bottom: 1px solid $dark;
+}
+
+#fsdocs-content li {
+    margin: initial;
+}
+
+strong {
+    border-bottom: 2px solid $primary;
+}
+
+em {
+    color: $primary;
+}
+
+table {
+    @extend .table, .is-striped;
+}
+
+#fsdocs-content ul {
+    padding-inline-start: 40px;
+    list-style-type: disc;
+}
+#fsdocs-content ol{
+    padding-inline-start: 40px;
+    list-style-type: decimal;
+}
+
+#fsdocs-content blockquote {
+    @extend .p-4;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+    background-color: $white-ter;
+}
+
+#fsdocs-content table.pre, #fsdocs-content pre.fssnip, #fsdocs-content pre {
+    // line-height: 13pt;
+    // border: 0px solid #d8d8d8;
+    // border-top: 0px solid #e3e3e3;
+    // border-collapse: separate;
+    // white-space: pre;
+    // font: 9pt 'Droid Sans Mono',consolas,monospace;
+    // width: 90%;
+    // margin: 10px 20px 20px 20px;
+    background-color: $dark;
+    // padding: 10px;
+    // border-radius: 5px;
+    // color: #d1d1d1;
+    // max-width: none;
+    overflow-x: auto;
+    display:block;
+}
+
+#fsdocs-menu::-webkit-scrollbar{
+    width: 1px;
+}
+
+#fsdocs-menu::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: $dark;
+}
+
+#fsdocs-content table.pre::-webkit-scrollbar-track, 
+#fsdocs-content pre.fssnip ::-webkit-scrollbar-track, 
+#fsdocs-content pre ::-webkit-scrollbar-track
+{
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    background-color: $dark;
+}
+
+#fsdocs-content table.pre::-webkit-scrollbar, 
+#fsdocs-content pre.fssnip ::-webkit-scrollbar, 
+#fsdocs-content pre ::-webkit-scrollbar
+{
+    height: 8px;
+    background-color: $dark;
+    border-radius:5px
+}
+
+#fsdocs-content table.pre::-webkit-scrollbar-thumb, 
+#fsdocs-content pre.fssnip ::-webkit-scrollbar-thumb, 
+#fsdocs-content pre ::-webkit-scrollbar-thumb
+{
+    border-radius: 5px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: $primary;
+}
+
+
+/*--------------------------------------------------------------------------
+  Formatting for F# code snippets
+/*--------------------------------------------------------------------------*/
+
+// .fsdocs-param-name,
+// .fsdocs-return-name {
+//     font-weight: 600;
+// }
+// /* strings --- and stlyes for other string related formats */
+// #fsdocs-content span.s {
+//     color: $fslabOrange;
+// }
+// /* printf formatters */
+// #fsdocs-content span.pf {
+//     color: $fslabLightOrange;
+// }
+// /* escaped chars */
+// #fsdocs-content span.e {
+//     color: $fslabLightRose;
+// }
+
+// /* identifiers --- and styles for more specific identifier types */
+// #fsdocs-content span.id {
+//     color: $white;
+// }
+// /* module */
+// #fsdocs-content span.m {
+//     color: $fslabGreen;
+// }
+// /* reference type */
+// #fsdocs-content span.rt {
+//     color: $fslabGreen;
+// }
+// /* value type */
+// #fsdocs-content span.vt {
+//     color: $fslabGreen;
+// }
+// /* interface */
+// #fsdocs-content span.if {
+//     color: $fslabGreen;
+// }
+// /* type argument */
+// #fsdocs-content span.ta {
+//     color: $fslabGreen;
+// }
+// /* disposable */
+// #fsdocs-content span.d {
+//     color: $fslabLightGreen;
+// }
+// /* property */
+// #fsdocs-content span.prop {
+//     color: $fslabGreen;
+// }
+// /* punctuation */
+// #fsdocs-content span.p {
+//     color: $fslabGreen;
+// }
+// /* function */
+// #fsdocs-content span.fn {
+//     color: $fslabLightAquamarine;
+// }
+// /* active pattern */
+// #fsdocs-content span.pat {
+//     color: #4ec9b0;
+// }
+// /* union case */
+// #fsdocs-content span.u {
+//     color: $fslabGreen;
+// }
+// /* enumeration */
+// #fsdocs-content span.e {
+//     color: $fslabGreen;
+// }
+// /* keywords */
+// #fsdocs-content span.k {
+//     color: $fslabLightRose;
+// }
+// /* comment */
+// #fsdocs-content span.c {
+//     color: $fslabDarkGreen;
+// }
+// /* operators */
+// #fsdocs-content span.o {
+//     color: $fslabLightAquamarine;
+// }
+// /* numbers */
+// #fsdocs-content span.n {
+//     color: $fslabLightGreen;
+// }
+// /* line number */
+// #fsdocs-content span.l {
+//     color: #80b0b0;
+// }
+// /* mutable var or ref cell */
+// #fsdocs-content span.v {
+//     color: #d1d1d1;
+//     font-weight: bold;
+// }
+// /* inactive code */
+// #fsdocs-content span.inactive {
+//     color: #808080;
+// }
+// /* preprocessor */
+// #fsdocs-content span.prep {
+//     color: #af75c1;
+// }
+// /* fsi output */
+// #fsdocs-content span.fsi {
+//     color: $white-bis;
+// }
+
+/* tool tip */
+div.fsdocs-tip {
+    background: #475b5f;
+    border-radius: 4px;
+    font: 11pt 'Droid Sans', arial, sans-serif;
+    padding: 6px 8px 6px 8px;
+    display: none;
+    color: #d1d1d1;
+    pointer-events: none;
+}
+
+    div.fsdocs-tip code {
+        color: #d1d1d1;
+        font: 11pt 'Droid Sans', arial, sans-serif;
+    }
