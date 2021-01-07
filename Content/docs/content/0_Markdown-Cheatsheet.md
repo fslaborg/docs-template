@@ -245,7 +245,7 @@ throws
 instanceof
 ```
 
-However, there is way better syntax highlighting and also tooltips available for F# and C# if you use script files for generating those docs instead. Take  look [here]() and see an F# example [here]() 
+However, there is way better syntax highlighting and also tooltips available for F# and C# if you use script files for generating those docs instead. See an F# example [here](1_fsharp-code-example.html).
 
 ## Tables
 

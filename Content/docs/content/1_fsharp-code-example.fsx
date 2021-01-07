@@ -1,5 +1,10 @@
 (**
 # F# code formatting example
+
+This page is rendered from a F# script as input, containing real F# code besides this markdown section.
+
+hover above some bindings to get tooltips like in a real editor environment.
+
 *)
 
 ///this is comment

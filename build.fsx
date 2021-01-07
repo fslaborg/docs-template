@@ -96,6 +96,7 @@ let pack = BuildTask.create "Pack" [clean; compileSass;] {
             {p.MSBuildParams with 
                 Properties = ([
                     "Version",(sprintf "%i.%i.%i" version.Major version.Minor version.Patch )
+                    "PackageReleaseNotes",  (release.Notes |> String.concat "\r\n")
                 ] @ p.MSBuildParams.Properties
                 )
             }
