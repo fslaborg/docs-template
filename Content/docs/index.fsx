@@ -2,9 +2,9 @@
 # The fslab documentation template
 
 This template scaffolds the necessary folder structure for FSharp.Formatting 
-and adds custom styles in the fslab theme. 
+and adds custom styles in the **fslab** theme. 
 
-The provided stylesheet was compiled from sass (befor uploading the nuget package) and
+The provided stylesheet was compiled from sass (before uploading the nuget package) and
 uses the [Bulma](https://bulma.io/) CSS framework instead of bootstrap which is used by FSharp.Formatting per default.
 
 #### Table of contents 
@@ -20,7 +20,7 @@ uses the [Bulma](https://bulma.io/) CSS framework instead of bootstrap which is 
 
 ## Installation
 
-This template is available as a dotnet new template (from [nuget](https://www.nuget.org/packages/FsLab.DocumentationTemplate/)):
+This template is available as a _dotnet new_ template (from [nuget](https://www.nuget.org/packages/FsLab.DocumentationTemplate/)):
 
 ```no-highlight
 dotnet new -i FsLab.DocumentationTemplate
@@ -28,7 +28,13 @@ dotnet new -i FsLab.DocumentationTemplate
 
 ## Usage
 
-in the root of your project that you want to write documentation for, run:
+If not already present, create a _local tool manifest_ in the root of your project that you want to write documentation for:
+
+```no-highlight
+dotnet new tool-manifest
+```
+
+Then, still in the root of your project, run:
 
 ```no-highlight
 dotnet new fslab-docs
@@ -101,8 +107,6 @@ For more info please refer to the [FSharp.Formatting documentation](http://fspro
 ## Customization options
 
 ### Style sheet options
-
-
 
 ```no-highlight
 -s|--styles             Set the type of style content the template will initialize. For the sass file to work, you will have to download bulma

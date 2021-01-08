@@ -9,10 +9,24 @@ The current version is live on gh-pages:
 https://fslab.org/docs-template/
 
 
-## Usage
+## Installation
 
 ```powershell
 dotnet new -i FsLab.DocumentationTemplate
+```
+
+## Usage
+
+If not already present, create a local tool manifest in the root of your project that you want to write documentation for:
+
+```powershell
+dotnet new tool-manifest
+```
+
+Then, still in the root of your project, run:
+
+```powershell
+dotnet new fslab-docs
 ```
 
 for more more indepth information head over [here](https://fslab.org/docs-template/#Usage)

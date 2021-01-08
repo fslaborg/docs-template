@@ -17,7 +17,7 @@
           "choices": [
             {
                 "choice": "all",
-                "description": "sass file, compiled csss, and minified css"
+                "description": "include the sass file, compiled css, and minified css"
             },
             {
                 "choice": "sass",
