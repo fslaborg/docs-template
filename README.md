@@ -1,6 +1,6 @@
-# fslab documentation template
+# The fslab documentation template
 
-`dotnet new` template setting up the necessary folder structure and files for [FSharp.Formatting]() documentation. It uses a fslab color scheme.
+`dotnet new` template setting up the necessary folder structure and files for [FSharp.Formatting](https://github.com/fsprojects/FSharp.Formatting) documentation. It uses a custom fslab color scheme and html template.
 
 ## How does it look like?
 
@@ -9,11 +9,21 @@ The current version is live on gh-pages:
 https://fslab.org/docs-template/
 
 
-## Use
+## Usage
 
-WIP
+```powershell
+dotnet new -i FsLab.DocumentationTemplate
+```
+
+for more more indepth information head over [here](https://fslab.org/docs-template/#Usage)
 
 ## Develop
+
+To (re)compile with sass:
+
+`build.cmd -t compileSass` (Win)
+
+`build.sh -t compileSass` (Mac/Linux)
 
 Build the template nuget package: 
 
