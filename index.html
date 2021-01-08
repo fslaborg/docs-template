@@ -7,7 +7,7 @@
 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Kevin Schneider, fslaborg">
-    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="https://fslab.org/docs-template//img/favicon.ico">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
@@ -220,8 +220,8 @@
                 <div class="container" id="fsdocs-content">
                     <h1><a name="The-fslab-documentation-template" class="anchor" href="#The-fslab-documentation-template">The fslab documentation template</a></h1>
 <p>This template scaffolds the necessary folder structure for FSharp.Formatting
-and adds custom styles in the fslab theme.</p>
-<p>The provided stylesheet was compiled from sass (befor uploading the nuget package) and
+and adds custom styles in the <strong>fslab</strong> theme.</p>
+<p>The provided stylesheet was compiled from sass (before uploading the nuget package) and
 uses the <a href="https://bulma.io/">Bulma</a> CSS framework instead of bootstrap which is used by FSharp.Formatting per default.</p>
 <h4><a name="Table-of-contents" class="anchor" href="#Table-of-contents">Table of contents</a></h4>
 <ul>
@@ -238,11 +238,14 @@ uses the <a href="https://bulma.io/">Bulma</a> CSS framework instead of bootstra
 </li>
 </ul>
 <h2><a name="Installation" class="anchor" href="#Installation">Installation</a></h2>
-<p>This template is available as a dotnet new template (from <a href="https://www.nuget.org/packages/FsLab.DocumentationTemplate/">nuget</a>):</p>
+<p>This template is available as a <em>dotnet new</em> template (from <a href="https://www.nuget.org/packages/FsLab.DocumentationTemplate/">nuget</a>):</p>
 <table class="pre"><tr><td class="snippet"><pre class="fssnip"><code lang="no-highlight">dotnet new -i FsLab.DocumentationTemplate
 </code></pre></td></tr></table>
 <h2><a name="Usage" class="anchor" href="#Usage">Usage</a></h2>
-<p>in the root of your project that you want to write documentation for, run:</p>
+<p>If not already present, create a <em>local tool manifest</em> in the root of your project that you want to write documentation for:</p>
+<table class="pre"><tr><td class="snippet"><pre class="fssnip"><code lang="no-highlight">dotnet new tool-manifest
+</code></pre></td></tr></table>
+<p>Then, still in the root of your project, run:</p>
 <table class="pre"><tr><td class="snippet"><pre class="fssnip"><code lang="no-highlight">dotnet new fslab-docs
 </code></pre></td></tr></table>
 <p>See <a href="#Customization-options">further below</a> for command line customization options of the template:</p>
