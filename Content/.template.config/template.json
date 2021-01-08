@@ -9,6 +9,72 @@
         "language": "F#",
         "type": "item"
     },
+    "symbols": {
+        "styles": {
+          "type": "parameter",
+          "description": "Set the type of style content the template will initialize. For the sass file to work, you will have to download bulma",
+          "datatype": "choice",
+          "choices": [
+            {
+                "choice": "all",
+                "description": "sass file, compiled csss, and minified css"
+            },
+            {
+                "choice": "sass",
+                "description": "only include the sass file"
+            },
+            {
+                "choice": "minified",
+                "description": "only include the minified css file"
+            },
+            {
+                "choice": "css",
+                "description": "only include the compiled css file"
+            }
+          ],
+          "defaultValue": "css"
+        },
+        "include-samples": {
+            "type": "parameter",
+            "description": "wether to include sample files in the generated content",
+            "datatype": "bool",
+            "defaultValue": "true"
+          }
+    },
+    "sources": [
+        {
+            "exclude": [ 
+                "**/.template.config/**/*", 
+                "docs/content/fsdocs-custom.css",
+                "docs/content/fsdocs-custom.min.css",
+                "docs/content/fsdocs-custom.scss",
+                "docs/content/*.fsx",
+                "docs/content/*.md"
+            ],
+            "modifiers": [ 
+                {
+                    "include": "docs/content/fsdocs-custom.css",
+                    "condition": "(styles == \"css\" | styles == \"all\")"
+                },
+                {
+                    "include": "docs/content/fsdocs-custom.min.css",
+                    "condition": "(styles == \"minified\" | styles == \"all\")"
+                },
+                {
+                    "include": "docs/content/fsdocs-custom.scss",
+                    "condition": "(styles == \"sass\" | styles == \"all\")"
+                },
+                {
+                    "include": "docs/content/*.fsx",
+                    "condition": "(include-examples == true)"
+                },
+                {
+                    "include": "docs/content/*.md",
+                    "condition": "(include-examples == true)"
+                }
+            ]
+        }
+    ],
     "postActions": [
         {
             "condition": "(OS != \"Windows_NT\")",
