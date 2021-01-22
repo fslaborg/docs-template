@@ -16,6 +16,7 @@ uses the [Bulma](https://bulma.io/) CSS framework instead of bootstrap which is 
 - [Customization options](#Customization-options)
     - [Style sheet options](#Style-sheet-options)
     - [Inclusion of sample content](#Inclusion-of-sample-content)
+    - [Create notebooks](#Create-notebooks)
 
 
 ## Installation
@@ -54,6 +55,8 @@ docs
 |   
 │   0_Markdown-Cheatsheet.md
 │   1_fsharp-code-example.fsx
+│   2_inline-references.fsx
+│   3_notebooks.fsx
 |
 ├───content
 │   fsdocs-custom.css
@@ -75,7 +78,11 @@ in a markdown block indicated by `(** *)` guards. It will be rendered as the roo
 
 - `1_fsharp-code-example.fsx` is a script file that showcases the syntax highlighting style for F# snippets. It can also be viewed in all its glory [here]().
 
-- `fsdocs-custom.css` and `fsdocs-custom.min.css` contain the custom styling that applies the fslab styles.
+- `2_inline-references.fsx` is a script file that explains how to use inline references and use Plotly.NET for charting. It can also be viewed in all its glory [here]().
+
+- `3_notebooks.fsx` is a script file that showcases conditional content in documentation and how to use that to create dotnet interactive notebooks besides your html documentation. It can also be viewed in all its glory [here]().
+
+- `fsdocs-custom.css` contains the custom styling that applies the fslab styles.
 
  - the `img` folder contains the fslab logo and favicon. replace these files (with the same names) to youse sours
 
@@ -127,4 +134,16 @@ For more info please refer to the [FSharp.Formatting documentation](http://fspro
 
         Default:        true
 ```
+
+### Create notebooks
+
+```no-highlight
+-in|--include-notebooks  wether to include the notebook template file
+        
+        bool            - Optional
+
+        Default:        true
+```
+
 *)
+
