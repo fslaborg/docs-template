@@ -48,8 +48,8 @@
                 "docs/content/fsdocs-custom.css",
                 "docs/content/fsdocs-custom.min.css",
                 "docs/content/fsdocs-custom.scss",
-                "docs/content/*.fsx",
-                "docs/content/*.md"
+                "docs/*.fsx",
+                "docs/*.md"
             ],
             "modifiers": [ 
                 {
@@ -65,12 +65,12 @@
                     "condition": "(styles == \"sass\" | styles == \"all\")"
                 },
                 {
-                    "include": "docs/content/*.fsx",
-                    "condition": "(include-examples == true)"
+                    "include": "docs/*.fsx",
+                    "condition": "(include-samples == true)"
                 },
                 {
-                    "include": "docs/content/*.md",
-                    "condition": "(include-examples == true)"
+                    "include": "docs/*.md",
+                    "condition": "(include-samples == true)"
                 }
             ]
         }
