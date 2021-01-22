@@ -40,23 +40,23 @@ Then, still in the root of your project, run:
 dotnet new fslab-docs
 ```
 
-See [further below](#Customization-options) for command line customization options of the template:
-
-
 ## Quick content rundown:
 
-The template initializes the following folder structure when you initialize it in the root of your project:
+The default template initializes the following folder structure when you initialize it in the root of your project.
+
+See [further below](#Customization-options) for command line customization options of the template.
 
 <pre>
 docs
 │   index.fsx
 │   _template.html
-|   
+|   _template.ipynb
 |   
 │   0_Markdown-Cheatsheet.md
 │   1_fsharp-code-example.fsx
+|
+├───content
 │   fsdocs-custom.css
-│   fsdocs-custom.min.css
 │
 ├───img
 │       favicon.ico

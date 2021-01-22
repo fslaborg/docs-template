@@ -40,6 +40,13 @@
             "datatype": "bool",
             "defaultValue": "true"
           }
+          ,
+        "include-notebooks": {
+            "type": "parameter",
+            "description": "wether to include the notebook template file",
+            "datatype": "bool",
+            "defaultValue": "true"
+          }
     },
     "sources": [
         {
@@ -49,7 +56,8 @@
                 "docs/content/fsdocs-custom.min.css",
                 "docs/content/fsdocs-custom.scss",
                 "docs/*.fsx",
-                "docs/*.md"
+                "docs/*.md",
+                "docs/_template.ipynb"
             ],
             "modifiers": [ 
                 {
@@ -71,6 +79,10 @@
                 {
                     "include": "docs/*.md",
                     "condition": "(include-samples == true)"
+                },
+                {
+                    "include": "docs/_template.ipynb",
+                    "condition": "(include-notebooks == true)"
                 }
             ]
         }
