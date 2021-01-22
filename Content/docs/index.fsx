@@ -74,13 +74,13 @@ in a markdown block indicated by `(** *)` guards. It will be rendered as the roo
 
 - `_template.html` is the root html scaffold (sidebar to the left, script and style loading) where all of the individual docs will be injected into
 
-- `0_Markdown-Cheatsheet.md` is a adaption of [this markdown cheat sheet]() that shows how to write markdown and showcases the rendered equivalents. It can also be viewed in all its glory [here]().
+- `0_Markdown-Cheatsheet.md` is a adaption of [this markdown cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) that shows how to write markdown and showcases the rendered equivalents. It can also be viewed in all its glory [here](https://fslab.org/docs-template/0_Markdown-Cheatsheet.html).
 
-- `1_fsharp-code-example.fsx` is a script file that showcases the syntax highlighting style for F# snippets. It can also be viewed in all its glory [here]().
+- `1_fsharp-code-example.fsx` is a script file that showcases the syntax highlighting style for F# snippets. It can also be viewed in all its glory [here](https://fslab.org/docs-template/1_fsharp-code-example.html).
 
-- `2_inline-references.fsx` is a script file that explains how to use inline references and use Plotly.NET for charting. It can also be viewed in all its glory [here]().
+- `2_inline-references.fsx` is a script file that explains how to use inline references and use Plotly.NET for charting. It can also be viewed in all its glory [here](https://fslab.org/docs-template/2_inline-references.html).
 
-- `3_notebooks.fsx` is a script file that showcases conditional content in documentation and how to use that to create dotnet interactive notebooks besides your html documentation. It can also be viewed in all its glory [here]().
+- `3_notebooks.fsx` is a script file that showcases conditional content in documentation and how to use that to create dotnet interactive notebooks besides your html documentation. It can also be viewed in all its glory [here](https://fslab.org/docs-template/3_notebooks.html).
 
 - `fsdocs-custom.css` contains the custom styling that applies the fslab styles.
 
