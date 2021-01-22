@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Inline package references and charting
+    <title>Including notebooks
 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Kevin Schneider, fslaborg">
@@ -60,20 +60,26 @@
   Documentation
 </li>             
 <li class="nav-item">
-  <a class="nav-link" href="https://fslab.org/docs-template/content/2_inline-references.html">
+  <a class="nav-link" href="https://fslab.org/docs-template/0_Markdown-Cheatsheet.html">
+    Markdown cheatsheet
+
+  </a>
+</li>             
+<li class="nav-item">
+  <a class="nav-link" href="https://fslab.org/docs-template/2_inline-references.html">
     Inline package references and charting
 
   </a>
 </li>             
 <li class="nav-item">
-  <a class="nav-link" href="https://fslab.org/docs-template/content/1_fsharp-code-example.html">
-    F# code formatting example
+  <a class="nav-link" href="https://fslab.org/docs-template/3_notebooks.html">
+    Including notebooks
 
   </a>
 </li>             
 <li class="nav-item">
-  <a class="nav-link" href="https://fslab.org/docs-template/content/0_Markdown-Cheatsheet.html">
-    Markdown cheatsheet
+  <a class="nav-link" href="https://fslab.org/docs-template/1_fsharp-code-example.html">
+    F# code formatting example
 
   </a>
 </li>
@@ -92,46 +98,58 @@
         <div class="column is-10 is-paddingless">
             <div class="section pt-4">
                 <div class="container" id="fsdocs-content">
-                    <h1><a name="Inline-package-references-and-charting" class="anchor" href="#Inline-package-references-and-charting">Inline package references and charting</a></h1>
-<p>With fsdocs 8.0, the tool can roll forward to .net 5, meaning you can use inline package references in the docs scripts:</p>
-<pre class="fssnip highlighted"><code lang="fsharp"><span class="pp">#r</span> <span class="s">&quot;nuget: Plotly.NET, 2.0.0-alpha5&quot;</span>
-
-<span class="k">open</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="id">Plotly</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="id">NET</span>
-
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs3', 3)" onmouseover="showTip(event, 'fs3', 3)" class="id">myChart</span> <span class="o">=</span> 
-    <span onmouseout="hideTip(event, 'fs4', 4)" onmouseover="showTip(event, 'fs4', 4)" class="rt">Chart</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs5', 5)" onmouseover="showTip(event, 'fs5', 5)" class="id">Line</span><span class="pn">(</span>
-        <span class="pn">[</span>
-            <span class="n">1.</span><span class="pn">,</span><span class="n">1.</span>
-            <span class="n">5.</span><span class="pn">,</span><span class="n">6.</span>
-            <span class="n">23.</span><span class="pn">,</span><span class="n">9.</span>
-        <span class="pn">]</span>
-    <span class="pn">)</span>
-    <span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs4', 6)" onmouseover="showTip(event, 'fs4', 6)" class="rt">Chart</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs6', 7)" onmouseover="showTip(event, 'fs6', 7)" class="id">withTitle</span> <span class="s">&quot;Hello fsdocs!&quot;</span>
-</code></pre>
-<p>You can now also include raw html in your docs scripts with the new <code>include-it-raw</code>.
-To incude the chart html of a Plotly.NET chart and and render it on the docs page, use the <code>GenericChart.toChartHTML</code>
-and include the raw output.</p>
-<p>the actual codeblock looks like this:</p>
+                    <h1><a name="Including-notebooks" class="anchor" href="#Including-notebooks">Including notebooks</a></h1>
+<p>To include dotnet interactive notebooks in the ipynb format, it is enough for the <code>_template.ipynb</code> file to simply exist.</p>
+<p>There are however some customization options with fsdocs that move your documentation to the next level:</p>
+<h2><a name="Conditional-package-references" class="anchor" href="#Conditional-package-references">Conditional package references</a></h2>
+<p>use the IPYNB compiler directive in conjuntion with <code>condition:ipynb</code> to include blocks only in the rendered notebook file.</p>
+<p>This is especially usefull for referencing packages that otherwise be referenced locally during yopur buildchain:</p>
 
 <pre>
+#r "/path/to/your/binaries/during/local/build"
+
+(***condition:ipynb***)
+#if IPYNB
+#r "nuget: yourProjectOnNuget, 1.3.3.7"
+#endif // IPYNB
+</pre>
+
+<h2><a name="Conditional-value-inclusion" class="anchor" href="#Conditional-value-inclusion">Conditional value inclusion</a></h2>
+<p>Sometimes the content you want to include might differ aswell. An example is Plotly.NET charts.
+While you want to dump the chart html directly into the html docs via (<code>include-it-raw</code>),
+you want to end cells in notebooks with the chart value itself to include the chart in the output cell with Plotly.NET.Interactive.</p>
+<p>Here is an example for such an conditional block:</p>
+
+<pre>
+open Plotly.NET
+
+let myChart = Chart.Point([1.,2.])
+
+(***condition:ipynb***)
+#if IPYNB
+myChart
+#endif // IPYNB
+
 (***hide***)
 myChart |> GenericChart.toChartHTML
 (***include-it-raw***)
 </pre>
-</pre>
 
-<p>Here is the rendered chart:</p>
-<div id="13169324-24be-4d87-ac12-7ba2d7660a28" style="width: 600px; height: 600px;"><!-- Plotly chart will be drawn inside this DIV --></div>
+<pre class="fssnip highlighted"><code lang="fsharp"><span class="k">open</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="id">Plotly</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="id">NET</span>
+
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs3', 3)" onmouseover="showTip(event, 'fs3', 3)" class="id">myChart</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs4', 4)" onmouseover="showTip(event, 'fs4', 4)" class="rt">Chart</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs5', 5)" onmouseover="showTip(event, 'fs5', 5)" class="id">Point</span><span class="pn">(</span><span class="pn">[</span><span class="n">1.</span><span class="pn">,</span><span class="n">2.</span><span class="pn">]</span><span class="pn">)</span>
+</code></pre>
+<div id="9dacb9e5-0c2c-46f1-9cb6-a17fe4ee60fb" style="width: 600px; height: 600px;"><!-- Plotly chart will be drawn inside this DIV --></div>
 <script type="text/javascript">
 
             var renderPlotly = function() {
             var fsharpPlotlyRequire = requirejs.config({context:'fsharp-plotly',paths:{plotly:'https://cdn.plot.ly/plotly-latest.min'}}) || require;
             fsharpPlotlyRequire(['plotly'], function(Plotly) {
 
-            var data = [{"type":"scatter","x":[1.0,5.0,23.0],"y":[1.0,6.0,9.0],"mode":"lines","marker":{}}];
-            var layout = {"title":"Hello fsdocs!"};
+            var data = [{"type":"scatter","x":[1.0],"y":[2.0],"mode":"markers","marker":{}}];
+            var layout = {};
             var config = {};
-            Plotly.newPlot('13169324-24be-4d87-ac12-7ba2d7660a28', data, layout, config);
+            Plotly.newPlot('9dacb9e5-0c2c-46f1-9cb6-a17fe4ee60fb', data, layout, config);
 });
             };
             if ((typeof(requirejs) !==  typeof(Function)) || (typeof(requirejs.config) !== typeof(Function))) {
@@ -147,6 +165,13 @@ myChart |> GenericChart.toChartHTML
             }
 </script>
 
+<h2><a name="Including-binder-links" class="anchor" href="#Including-binder-links">Including binder links</a></h2>
+<p><a href="">Binder</a> is an awesome project that launches an instance of your notebook given the correct <code>Dockerfile</code> and <code>nuget.config</code>, which will be added automatically by the <code>fsdocs</code> tool when you build the docs.</p>
+<p>you can include a binder link like this (supposed you use gh-pages to host your docs):</p>
+<pre class="fssnip highlighted"><code lang="fsharp"><span class="pn">[</span><span class="o">!</span><span class="pn">[</span><span class="id">Binder</span><span class="pn">]</span><span class="pn">(</span><span class="id">https</span><span class="pn">:</span><span class="c">//mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/&lt;YOUR-ORG&gt;/&lt;YOUR-PROJECT&gt;/gh-pages?filepath=&lt;YOUR-DOCS-FILENAME&gt;.ipynb)</span>
+</code></pre>
+<p>In fact, you can use this link here to check the conditionals of this very page in a notebook:</p>
+<p><a href="https://mybinder.org/v2/gh/fslaborg/docs-template/gh-pages?filepath=3_notebooks.ipynb.ipynb"><img src="https://mybinder.org/badge_logo.svg" alt="Binder" /></a></p>
 
                 </div>
             </div>
@@ -155,10 +180,9 @@ myChart |> GenericChart.toChartHTML
 <div class="fsdocs-tip" id="fs2">namespace Plotly.NET</div>
 <div class="fsdocs-tip" id="fs3">val myChart : GenericChart.GenericChart</div>
 <div class="fsdocs-tip" id="fs4">type Chart =<br />&#160;&#160;static member Area : xy:seq&lt;#IConvertible * #IConvertible&gt; * ?Name:string * ?ShowMarkers:bool * ?Showlegend:bool * ?MarkerSymbol:Symbol * ?Color:string * ?Opacity:float * ?Labels:seq&lt;string&gt; * ?TextPosition:TextPosition * ?TextFont:Font * ?Dash:DrawingStyle * ?Width:&#39;a2 -&gt; GenericChart<br />&#160;&#160;static member Area : x:seq&lt;#IConvertible&gt; * y:seq&lt;#IConvertible&gt; * ?Name:string * ?ShowMarkers:bool * ?Showlegend:bool * ?MarkerSymbol:Symbol * ?Color:string * ?Opacity:float * ?Labels:seq&lt;string&gt; * ?TextPosition:TextPosition * ?TextFont:Font * ?Dash:DrawingStyle * ?Width:&#39;a2 -&gt; GenericChart<br />&#160;&#160;static member Bar : keysvalues:seq&lt;#IConvertible * #IConvertible&gt; * ?Name:string * ?Showlegend:bool * ?Color:&#39;a2 * ?Opacity:float * ?Labels:seq&lt;string&gt; * ?TextPosition:TextPosition * ?TextFont:Font * ?Marker:Marker -&gt; GenericChart<br />&#160;&#160;static member Bar : keys:seq&lt;#IConvertible&gt; * values:seq&lt;#IConvertible&gt; * ?Name:string * ?Showlegend:bool * ?Color:&#39;a2 * ?Opacity:float * ?Labels:seq&lt;string&gt; * ?TextPosition:TextPosition * ?TextFont:Font * ?Marker:Marker -&gt; GenericChart<br />&#160;&#160;static member BoxPlot : xy:seq&lt;&#39;a0 * &#39;a1&gt; * ?Name:string * ?Showlegend:bool * ?Color:string * ?Fillcolor:&#39;a2 * ?Opacity:float * ?Whiskerwidth:&#39;a3 * ?Boxpoints:Boxpoints * ?Boxmean:BoxMean * ?Jitter:&#39;a4 * ?Pointpos:&#39;a5 * ?Orientation:Orientation * ?Marker:Marker * ?Line:Line * ?Alignmentgroup:&#39;a6 * ?Offsetgroup:&#39;a7 * ?Notched:bool * ?NotchWidth:float * ?QuartileMethod:QuartileMethod -&gt; GenericChart<br />&#160;&#160;static member BoxPlot : ?x:&#39;a0 * ?y:&#39;a1 * ?Name:string * ?Showlegend:bool * ?Color:string * ?Fillcolor:&#39;a2 * ?Opacity:float * ?Whiskerwidth:&#39;a3 * ?Boxpoints:Boxpoints * ?Boxmean:BoxMean * ?Jitter:&#39;a4 * ?Pointpos:&#39;a5 * ?Orientation:Orientation * ?Marker:Marker * ?Line:Line * ?Alignmentgroup:&#39;a6 * ?Offsetgroup:&#39;a7 * ?Notched:bool * ?NotchWidth:float * ?QuartileMethod:QuartileMethod -&gt; GenericChart<br />&#160;&#160;static member Bubble : xysizes:seq&lt;#IConvertible * #IConvertible * #IConvertible&gt; * ?Name:string * ?Showlegend:bool * ?MarkerSymbol:Symbol * ?Color:string * ?Opacity:float * ?Labels:seq&lt;string&gt; * ?TextPosition:TextPosition * ?TextFont:Font * ?StackGroup:string * ?Orientation:Orientation * ?GroupNorm:GroupNorm * ?UseWebGL:bool -&gt; GenericChart<br />&#160;&#160;static member Bubble : x:seq&lt;#IConvertible&gt; * y:seq&lt;#IConvertible&gt; * sizes:seq&lt;#IConvertible&gt; * ?Name:string * ?Showlegend:bool * ?MarkerSymbol:Symbol * ?Color:string * ?Opacity:float * ?Labels:seq&lt;string&gt; * ?TextPosition:TextPosition * ?TextFont:Font * ?StackGroup:string * ?Orientation:Orientation * ?GroupNorm:GroupNorm * ?UseWebGL:bool -&gt; GenericChart<br />&#160;&#160;static member Candlestick : stockTimeSeries:seq&lt;DateTime * StockData&gt; * ?Increasing:Line * ?Decreasing:Line * ?WhiskerWidth:float * ?Line:Line * ?XCalendar:Calendar -&gt; GenericChart<br />&#160;&#160;static member Candlestick : open:seq&lt;#IConvertible&gt; * high:seq&lt;#IConvertible&gt; * low:seq&lt;#IConvertible&gt; * close:seq&lt;#IConvertible&gt; * x:seq&lt;#IConvertible&gt; * ?Increasing:Line * ?Decreasing:Line * ?WhiskerWidth:float * ?Line:Line * ?XCalendar:Calendar -&gt; GenericChart<br />&#160;&#160;...</div>
-<div class="fsdocs-tip" id="fs5">static member Chart.Line : xy:seq&lt;#System.IConvertible * #System.IConvertible&gt; * ?Name:string * ?ShowMarkers:bool * ?Showlegend:bool * ?MarkerSymbol:StyleParam.Symbol * ?Color:string * ?Opacity:float * ?Labels:seq&lt;string&gt; * ?TextPosition:StyleParam.TextPosition * ?TextFont:Font * ?Dash:&#39;c * ?Width:&#39;d * ?StackGroup:string * ?Orientation:StyleParam.Orientation * ?GroupNorm:StyleParam.GroupNorm * ?UseWebGL:bool -&gt; GenericChart.GenericChart<br />static member Chart.Line : x:seq&lt;#System.IConvertible&gt; * y:seq&lt;#System.IConvertible&gt; * ?Name:string * ?ShowMarkers:bool * ?Showlegend:bool * ?MarkerSymbol:StyleParam.Symbol * ?Color:string * ?Opacity:float * ?Labels:seq&lt;string&gt; * ?TextPosition:StyleParam.TextPosition * ?TextFont:Font * ?Dash:&#39;a2 * ?Width:&#39;a3 * ?StackGroup:string * ?Orientation:StyleParam.Orientation * ?GroupNorm:StyleParam.GroupNorm * ?UseWebGL:bool -&gt; GenericChart.GenericChart</div>
-<div class="fsdocs-tip" id="fs6">static member Chart.withTitle : title:string * ?Titlefont:Font -&gt; (GenericChart.GenericChart -&gt; GenericChart.GenericChart)</div>
-<div class="fsdocs-tip" id="fs7">module GenericChart<br /><br />from Plotly.NET</div>
-<div class="fsdocs-tip" id="fs8">val toChartHTML : gChart:GenericChart.GenericChart -&gt; string</div>
+<div class="fsdocs-tip" id="fs5">static member Chart.Point : xy:seq&lt;#System.IConvertible * #System.IConvertible&gt; * ?Name:string * ?Showlegend:bool * ?MarkerSymbol:StyleParam.Symbol * ?Color:string * ?Opacity:float * ?Labels:seq&lt;string&gt; * ?TextPosition:StyleParam.TextPosition * ?TextFont:Font * ?StackGroup:string * ?Orientation:StyleParam.Orientation * ?GroupNorm:StyleParam.GroupNorm * ?UseWebGL:bool -&gt; GenericChart.GenericChart<br />static member Chart.Point : x:seq&lt;#System.IConvertible&gt; * y:seq&lt;#System.IConvertible&gt; * ?Name:string * ?Showlegend:bool * ?MarkerSymbol:StyleParam.Symbol * ?Color:string * ?Opacity:float * ?Labels:seq&lt;string&gt; * ?TextPosition:StyleParam.TextPosition * ?TextFont:Font * ?StackGroup:string * ?Orientation:StyleParam.Orientation * ?GroupNorm:StyleParam.GroupNorm * ?UseWebGL:bool -&gt; GenericChart.GenericChart</div>
+<div class="fsdocs-tip" id="fs6">module GenericChart<br /><br />from Plotly.NET</div>
+<div class="fsdocs-tip" id="fs7">val toChartHTML : gChart:GenericChart.GenericChart -&gt; string</div>
 
     </div>
 

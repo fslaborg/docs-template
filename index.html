@@ -60,20 +60,26 @@
   Documentation
 </li>             
 <li class="nav-item">
-  <a class="nav-link" href="https://fslab.org/docs-template/content/2_inline-references.html">
+  <a class="nav-link" href="https://fslab.org/docs-template/0_Markdown-Cheatsheet.html">
+    Markdown cheatsheet
+
+  </a>
+</li>             
+<li class="nav-item">
+  <a class="nav-link" href="https://fslab.org/docs-template/2_inline-references.html">
     Inline package references and charting
 
   </a>
 </li>             
 <li class="nav-item">
-  <a class="nav-link" href="https://fslab.org/docs-template/content/1_fsharp-code-example.html">
-    F# code formatting example
+  <a class="nav-link" href="https://fslab.org/docs-template/3_notebooks.html">
+    Including notebooks
 
   </a>
 </li>             
 <li class="nav-item">
-  <a class="nav-link" href="https://fslab.org/docs-template/content/0_Markdown-Cheatsheet.html">
-    Markdown cheatsheet
+  <a class="nav-link" href="https://fslab.org/docs-template/1_fsharp-code-example.html">
+    F# code formatting example
 
   </a>
 </li>
@@ -108,6 +114,7 @@ uses the <a href="https://bulma.io/">Bulma</a> CSS framework instead of bootstra
 <ul>
 <li><a href="#Style-sheet-options">Style sheet options</a></li>
 <li><a href="#Inclusion-of-sample-content">Inclusion of sample content</a></li>
+<li><a href="#Create-notebooks">Create notebooks</a></li>
 </ul>
 </li>
 </ul>
@@ -122,19 +129,22 @@ uses the <a href="https://bulma.io/">Bulma</a> CSS framework instead of bootstra
 <p>Then, still in the root of your project, run:</p>
 <table class="pre"><tr><td class="snippet"><pre class="fssnip"><code lang="no-highlight">dotnet new fslab-docs
 </code></pre></td></tr></table>
-<p>See <a href="#Customization-options">further below</a> for command line customization options of the template:</p>
 <h2><a name="Quick-content-rundown" class="anchor" href="#Quick-content-rundown">Quick content rundown:</a></h2>
-<p>The template initializes the following folder structure when you initialize it in the root of your project:</p>
+<p>The default template initializes the following folder structure when you initialize it in the root of your project.</p>
+<p>See <a href="#Customization-options">further below</a> for command line customization options of the template.</p>
 <pre>
 docs
 │   index.fsx
 │   _template.html
-│
+|   _template.ipynb
+|   
+│   0_Markdown-Cheatsheet.md
+│   1_fsharp-code-example.fsx
+│   2_inline-references.fsx
+│   3_notebooks.fsx
+|
 ├───content
-│       0_Markdown-Cheatsheet.md
-│       1_fsharp-code-example.fsx
-│       fsdocs-custom.css
-│       fsdocs-custom.min.css
+│   fsdocs-custom.css
 │
 ├───img
 │       favicon.ico
@@ -149,22 +159,17 @@ docs
 in a markdown block indicated by <code>(** *)</code> guards. It will be rendered as the root <code>index.html</code> file of your documentation.</p>
 </li>
 <li><p><code>_template.html</code> is the root html scaffold (sidebar to the left, script and style loading) where all of the individual docs will be injected into</p></li>
+<li><p><code>0_Markdown-Cheatsheet.md</code> is a adaption of <a href="">this markdown cheat sheet</a> that shows how to write markdown and showcases the rendered equivalents. It can also be viewed in all its glory <a href="">here</a>.</p></li>
+<li><p><code>1_fsharp-code-example.fsx</code> is a script file that showcases the syntax highlighting style for F# snippets. It can also be viewed in all its glory <a href="">here</a>.</p></li>
+<li><p><code>2_inline-references.fsx</code> is a script file that explains how to use inline references and use Plotly.NET for charting. It can also be viewed in all its glory <a href="">here</a>.</p></li>
+<li><p><code>3_notebooks.fsx</code> is a script file that showcases conditional content in documentation and how to use that to create dotnet interactive notebooks besides your html documentation. It can also be viewed in all its glory <a href="">here</a>.</p></li>
 <li>
-<p>the <code>content</code> folder contains the following files:</p>
+<p><code>fsdocs-custom.css</code> contains the custom styling that applies the fslab styles.</p>
 <ul>
-<li>
-<p><code>0_Markdown-Cheatsheet.md</code> is a adaption of <a href="">this markdown cheat sheet</a> that shows how to write markdown and
-showcases the rendered equivalents. It can also be viewed in all its glory <a href="">here</a>.</p>
-</li>
-<li>
-<p><code>1_fsharp-code-example.fsx</code> is a script file that showcases the syntax highlighting style for F# snippets.
-It can also be viewed in all its glory <a href="">here</a>.</p>
-</li>
-<li><p><code>fsdocs-custom.css</code> and <code>fsdocs-custom.min.css</code> contain the custom styling that applies the fslab styles.</p></li>
-</ul>
-</li>
 <li><p>the <code>img</code> folder contains the fslab logo and favicon. replace these files (with the same names) to youse sours</p></li>
 <li><p><code>reference/_template.html</code> is a slightly adapted version of the template above for the API documentation</p></li>
+</ul>
+</li>
 </ul>
 <h2><a name="Creating-new-content" class="anchor" href="#Creating-new-content">Creating new content</a></h2>
 <ul>
@@ -194,6 +199,13 @@ It can also be viewed in all its glory <a href="">here</a>.</p>
 <h3><a name="Inclusion-of-sample-content" class="anchor" href="#Inclusion-of-sample-content">Inclusion of sample content</a></h3>
 <table class="pre"><tr><td class="snippet"><pre class="fssnip"><code lang="no-highlight">-is|--include-samples   wether to include sample files in the generated content
 
+        bool            - Optional
+
+        Default:        true
+</code></pre></td></tr></table>
+<h3><a name="Create-notebooks" class="anchor" href="#Create-notebooks">Create notebooks</a></h3>
+<table class="pre"><tr><td class="snippet"><pre class="fssnip"><code lang="no-highlight">-in|--include-notebooks  wether to include the notebook template file
+        
         bool            - Optional
 
         Default:        true
