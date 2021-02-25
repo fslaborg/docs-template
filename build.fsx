@@ -296,4 +296,5 @@ open PackageTasks
 open TestTasks
 open ReleaseTasks
 
+let _release = BuildTask.createEmpty "Release" [clean; compileSass; pack; ] 
 BuildTask.runOrDefaultWithArguments pack
