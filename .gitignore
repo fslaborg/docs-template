@@ -194,3 +194,4 @@ gh-pages
 
 .ionide
 
+node_modules/
