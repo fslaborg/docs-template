@@ -234,7 +234,6 @@ module ReleaseTasks =
             failwith "aborted"
     }
 
-    
     let publishNuget = BuildTask.create "PublishNuget" [clean; compileSass; pack] {
         let targets = (!! (sprintf "%s/*.*pkg" pkgDir ))
         for target in targets do printfn "%A" target
@@ -296,5 +295,5 @@ open PackageTasks
 open TestTasks
 open ReleaseTasks
 
-let _release = BuildTask.createEmpty "Release" [clean; compileSass; pack; ] 
+let _release = BuildTask.createEmpty "Release" [clean; compileSass; pack; publishNuget; createTag] 
 BuildTask.runOrDefaultWithArguments pack

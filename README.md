@@ -11,7 +11,7 @@ https://fslab.org/docs-template/
 
 ## Installation
 
-![](https://img.shields.io/nuget/v/FsLab.DocumentationTemplate)
+[![](https://img.shields.io/nuget/v/FsLab.DocumentationTemplate)](https://www.nuget.org/packages/FsLab.DocumentationTemplate/)
 
 ```powershell
 dotnet new -i FsLab.DocumentationTemplate
