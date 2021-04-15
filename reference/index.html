@@ -39,14 +39,13 @@
                 <div class="content">
                     <!-- BEGIN SEARCH BOX: this adds support for the search box -->
                     <div id="header">
-                        <div class="searchbox" id="fsdocs-searchbox">
-                            <label for="search-by">
-                                <i class="fas fa-search"></i>
-                            </label>
-                            <input data-search-input="" id="search-by" type="search" placeholder="Search..." class="input"/>
-                            <span data-search-clear="">
-                                <i class="fas fa-times"></i>
-                            </span>
+                        <div class="field">
+                            <div class="control has-icons-left has-icons-right searchbox" id="fsdocs-searchbox">
+                                <input data-search-input="" id="search-by" type="search" placeholder="Search..." class="input"/>
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </div>
                         </div>
                     </div>
                     <!-- END SEARCH BOX: this adds support for the search box -->
@@ -77,16 +76,28 @@
   <h2>
     Available Namespaces:
   </h2>
-  <ul>
-    <li>
-      <span>
-        <a href="https://fslab.org/docs-template/reference/testproject.html">
-          testProject
-        </a>
-         - 
-      </span>
-    </li>
-  </ul>
+  <table class="table outer-list fsdocs-member-list">
+    <thead>
+      <tr>
+        <td class="fsdocs-member-list-header">
+          Namespace
+        </td>
+        <td class="fsdocs-member-list-header">
+          Description
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <a href="https://fslab.org/docs-template/reference/testproject.html">
+            testProject
+          </a>
+        </td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </div>
                 </div>
             </div>

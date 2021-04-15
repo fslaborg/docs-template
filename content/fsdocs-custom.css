@@ -9034,6 +9034,7 @@ em {
 
 #fsdocs-content table.pre, #fsdocs-content pre.fssnip, #fsdocs-content pre {
   background-color: #200117;
+  color: #fafafa;
   overflow-x: auto;
   display: block; }
 
@@ -9071,8 +9072,11 @@ em {
   Formatting for F# code snippets
 /*--------------------------------------------------------------------------*/
 .fsdocs-param-name,
-.fsdocs-return-name {
-  font-weight: 600; }
+.fsdocs-return-name,
+.fsdocs-param {
+  font-weight: 900;
+  font-size: 0.85rem;
+  font-family: 'Roboto Mono', monospace; }
 
 /* strings --- and stlyes for other string related formats */
 #fsdocs-content span.s {
@@ -9082,9 +9086,13 @@ em {
 #fsdocs-content span.pf {
   color: #A00975; }
 
+/* escaped chars */
+#fsdocs-content span.e {
+  color: #d59a1b; }
+
 /* identifiers --- and styles for more specific identifier types */
 #fsdocs-content span.id {
-  color: white; }
+  color: #fafafa; }
 
 /* module */
 #fsdocs-content span.m {
@@ -9109,6 +9117,20 @@ em {
 /* disposable */
 #fsdocs-content span.d {
   color: #c6ffdd; }
+
+/* property */
+#fsdocs-content span.prop {
+  color: #fafafa; }
+
+/* punctuation */
+#fsdocs-content span.p {
+  color: #fafafa; }
+
+#fsdocs-content span.pn {
+  color: #fafafa; }
+
+#fsdocs-content span.f {
+  color: #fafafa; }
 
 #fsdocs-content span.fn {
   color: #d2c572; }
@@ -9139,6 +9161,23 @@ em {
 /* numbers */
 #fsdocs-content span.n {
   color: #c6ffdd; }
+
+/* line number */
+#fsdocs-content span.l {
+  color: #fafafa; }
+
+/* mutable var or ref cell */
+#fsdocs-content span.v {
+  color: #d2c572;
+  font-weight: bold; }
+
+/* inactive code */
+#fsdocs-content span.inactive {
+  color: #808080; }
+
+/* preprocessor */
+#fsdocs-content span.prep {
+  color: #ff9b9b; }
 
 /* fsi output */
 #fsdocs-content span.fsi {

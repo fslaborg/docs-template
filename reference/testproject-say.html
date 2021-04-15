@@ -39,14 +39,13 @@
                 <div class="content">
                     <!-- BEGIN SEARCH BOX: this adds support for the search box -->
                     <div id="header">
-                        <div class="searchbox" id="fsdocs-searchbox">
-                            <label for="search-by">
-                                <i class="fas fa-search"></i>
-                            </label>
-                            <input data-search-input="" id="search-by" type="search" placeholder="Search..." class="input"/>
-                            <span data-search-clear="">
-                                <i class="fas fa-times"></i>
-                            </span>
+                        <div class="field">
+                            <div class="control has-icons-left has-icons-right searchbox" id="fsdocs-searchbox">
+                                <input data-search-input="" id="search-by" type="search" placeholder="Search..." class="input"/>
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </div>
                         </div>
                     </div>
                     <!-- END SEARCH BOX: this adds support for the search box -->
@@ -71,20 +70,26 @@
             <div class="section pt-4">
                 <div class="container" id="fsdocs-content">
                     <div>
-  <h1>
+  <h2>
     Say Module
-  </h1>
-  <p>
-    Namespace: 
-    <a href="https://fslab.org/docs-template/reference/testproject.html">
-      testProject
-    </a>
-  </p>
-  <p>
-    Assembly: docs-template.dll
-  </p>
+  </h2>
+  <dl class="fsdocs-metadata">
+    <dt>
+      Namespace: 
+      <a href="https://fslab.org/docs-template/reference/testproject.html">
+        testProject
+      </a>
+    </dt>
+    <dt>
+      Assembly: docs-template.dll
+    </dt>
+  </dl>
   <div class="fsdocs-xmldoc">
-    a module
+    <div>
+      <p class="fsdocs-summary">
+        a module
+      </p>
+    </div>
   </div>
   <div>
     <h3>
@@ -103,7 +108,7 @@
       </thead>
       <tbody>
         <tr>
-          <td class="fsdocs-member-name">
+          <td class="fsdocs-member-usage">
             <div>
               <code onmouseout="hideTip(event, '1', 1)" onmouseover="showTip(event, '1', 1)">
                 <p>
@@ -138,14 +143,24 @@
               </div>
             </div>
           </td>
-          <td class="fsdocs-xmldoc">
-            <p class="fsdocs-summary">
+          <td class="fsdocs-member-xmldoc">
+            <div class="fsdocs-summary">
+              <div class="fsdocs-source-link" onclick="Clipboard_CopyTo('`cref:M:testProject.Say.hello`')">
+                <img src="https://fslab.org/docs-template/content/img/copy-md.png" class="normal"/>
+                <img src="https://fslab.org/docs-template/content/img/copy-md-blue.png" class="hover"/>
+              </div>
+              <div class="fsdocs-source-link" onclick="Clipboard_CopyTo('<see cref=\'M:testProject.Say.hello\'/>')">
+                <img src="https://fslab.org/docs-template/content/img/copy.png" class="normal"/>
+                <img src="https://fslab.org/docs-template/content/img/copy-blue.png" class="hover"/>
+              </div>
               <a href="https://github.com/fslaborg/docs-template/tree/master/Library.fs#L8-8" class="fsdocs-source-link">
                 <img src="https://fslab.org/docs-template/content/img/github.png" class="normal"/>
                 <img src="https://fslab.org/docs-template/content/img/github-blue.png" class="hover"/>
               </a>
-              a function that says hello to the name you pass it
-            </p>
+              <p class="fsdocs-summary">
+                a function that says hello to the name you pass it
+              </p>
+            </div>
             <dl class="fsdocs-params">
               <dt class="fsdocs-param">
                 <span class="fsdocs-param-name">
