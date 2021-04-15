@@ -1,3 +1,7 @@
+## Version 2.0.0 - 4/15/2021
+* Update fsdocs version to 11.0.2
+* Add additional snippet styles to reflect fsdocs updates
+
 ## Version 1.1.1 - 2/25/2021
 * Update fsdocs version to 9.0.1
 * Lock fsdocs version

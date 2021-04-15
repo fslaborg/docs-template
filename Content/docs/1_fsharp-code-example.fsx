@@ -31,6 +31,7 @@ let d = C() :> IA
 let e = d.B("soos")
 
 (***include-value:e***)
+
 module ThisIsAModule =
 
     type Union =

@@ -117,9 +117,6 @@ $table-cell-heading-color: $primary;
         background-color: $grey-lightest;
     }
 }
-
-
-
 .navbar-nav {
     @extend .menu-list;
 }
@@ -132,7 +129,6 @@ $table-cell-heading-color: $primary;
 .active {
     @extend .is-active;
 }
-
 
 #fsdocs-content h1 a, #fsdocs-content h1 a:hover, #fsdocs-content h1 a:focus,
 #fsdocs-content h2 a, #fsdocs-content h2 a:hover, #fsdocs-content h2 a:focus, 
@@ -200,19 +196,8 @@ table {
 }
 
 #fsdocs-content table.pre, #fsdocs-content pre.fssnip, #fsdocs-content pre {
-    // line-height: 13pt;
-    // border: 0px solid #d8d8d8;
-    // border-top: 0px solid #e3e3e3;
-    // border-collapse: separate;
-    // white-space: pre;
-    // font: 9pt 'Droid Sans Mono',consolas,monospace;
-    // width: 90%;
-    // margin: 10px 20px 20px 20px;
     background-color: $dark;
-    // padding: 10px;
-    // border-radius: 5px;
-    // color: #d1d1d1;
-    // max-width: none;
+    color: $white-bis;
     overflow-x: auto;
     display:block;
 }
@@ -255,27 +240,36 @@ table {
     background-color: $primary;
 }
 
-
 /*--------------------------------------------------------------------------
   Formatting for F# code snippets
 /*--------------------------------------------------------------------------*/
 
 .fsdocs-param-name,
-.fsdocs-return-name {
-    font-weight: 600;
+.fsdocs-return-name,
+.fsdocs-param {
+    font-weight: 900;
+    font-size: 0.85rem;
+    font-family: 'Roboto Mono', monospace;
 }
+
 /* strings --- and stlyes for other string related formats */
 #fsdocs-content span.s {
     color: $fslabOrange;
 }
+
 /* printf formatters */
 #fsdocs-content span.pf {
     color: $primary ;
 }
 
+/* escaped chars */
+#fsdocs-content span.e {
+    color: $fslabOrange;
+}
+
 /* identifiers --- and styles for more specific identifier types */
 #fsdocs-content span.id {
-    color: $white;
+    color: $white-bis;
 }
 /* module */
 #fsdocs-content span.m {
@@ -302,7 +296,24 @@ table {
     color: $fslabLightGreen;
 }
 
+/* property */
+#fsdocs-content span.prop {
+    color: $white-bis;
+}
+/* punctuation */
+#fsdocs-content span.p {
+    color: $white-bis;
+}
+
+#fsdocs-content span.pn {
+    color: $white-bis;
+}
+
 // /* function */
+#fsdocs-content span.f {
+    color: $white-bis;
+}
+
 #fsdocs-content span.fn {
     color: $fslabLightOrange;
 }
@@ -333,6 +344,25 @@ table {
 /* numbers */
 #fsdocs-content span.n {
     color: $fslabLightGreen;
+}
+
+/* line number */
+#fsdocs-content span.l {
+    color: $white-bis;
+}
+
+/* mutable var or ref cell */
+#fsdocs-content span.v {
+    color: $fslabLightOrange;
+    font-weight: bold;
+}
+/* inactive code */
+#fsdocs-content span.inactive {
+    color: #808080;
+}
+/* preprocessor */
+#fsdocs-content span.prep {
+    color: $fslabLightRose;
 }
 
 /* fsi output */
