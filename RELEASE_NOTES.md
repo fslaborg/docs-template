@@ -1,3 +1,6 @@
+## Version 2.0.1 - 4/15/2021
+* install fsdocs as local tool instead of global. 
+
 ## Version 2.0.0 - 4/15/2021
 * Update fsdocs version to 11.0.2
 * Add additional snippet styles to reflect fsdocs updates
