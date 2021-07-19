@@ -3,8 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Inline package references and charting
-</title>
+    <title>Inline package references and charting</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Kevin Schneider, fslaborg">
     <link rel="shortcut icon" type="image/x-icon" href="https://fslab.org/docs-template//img/favicon.ico">
@@ -56,30 +55,26 @@
                         <li class="nav-item" id="fsdocs-release-notes-link"><a class="nav-link" href="https://github.com/fslaborg/docs-template/blob/master/RELEASE_NOTES.md">Release Notes</a></li>
                         <li class="nav-item" id="fsdocs-repository-link"><a class="nav-link" href="https://github.com/fslaborg/docs-template/">Source Repository</a></li>
                         <li class="nav-header">
-  Documentation
+  sample content
 </li>             
 <li class="nav-item">
   <a class="nav-link" href="https://fslab.org/docs-template/0_Markdown-Cheatsheet.html">
     Markdown cheatsheet
-
-  </a>
-</li>             
-<li class="nav-item">
-  <a class="nav-link" href="https://fslab.org/docs-template/3_notebooks.html">
-    Including notebooks
-
   </a>
 </li>             
 <li class="nav-item">
   <a class="nav-link" href="https://fslab.org/docs-template/1_fsharp-code-example.html">
     F# code formatting example
-
   </a>
 </li>             
 <li class="nav-item">
   <a class="nav-link" href="https://fslab.org/docs-template/2_inline-references.html">
     Inline package references and charting
-
+  </a>
+</li>             
+<li class="nav-item">
+  <a class="nav-link" href="https://fslab.org/docs-template/3_notebooks.html">
+    Including notebooks
   </a>
 </li>
                         <li class="nav-header">
@@ -97,11 +92,7 @@
         <div class="column is-10 is-paddingless">
             <div class="section pt-4">
                 <div class="container" id="fsdocs-content">
-                    <hr />
-<p>title: Inline package references and charting
-category: sample content
-categoryindex: 1</p>
-<h2><a name="index-3" class="anchor" href="#index-3">index: 3</a></h2>
+                    
 <h1><a name="Inline-package-references-and-charting" class="anchor" href="#Inline-package-references-and-charting">Inline package references and charting</a></h1>
 <p>With fsdocs 8.0, the tool can roll forward to .net 5, meaning you can use inline package references in the docs scripts:</p>
 <pre class="fssnip highlighted"><code lang="fsharp"><span class="pp">#r</span> <span class="s">&quot;nuget: Plotly.NET, 2.0.0-preview.6&quot;</span>
@@ -131,29 +122,29 @@ myChart |> GenericChart.toChartHTML
 </pre>
 
 <p>Here is the rendered chart:</p>
-<div id="d60f9acf-9dfe-4b1d-bd93-565fb0899f2a" style="width: 600px; height: 600px;"><!-- Plotly chart will be drawn inside this DIV --></div>
+<div id="5a7c1a92-792f-4280-ac17-081fc479e0c6" style="width: 600px; height: 600px;"><!-- Plotly chart will be drawn inside this DIV --></div>
 <script type="text/javascript">
 
-            var renderPlotly_d60f9acf9dfe4b1dbd93565fb0899f2a = function() {
+            var renderPlotly_5a7c1a92792f4280ac17081fc479e0c6 = function() {
             var fsharpPlotlyRequire = requirejs.config({context:'fsharp-plotly',paths:{plotly:'https://cdn.plot.ly/plotly-latest.min'}}) || require;
             fsharpPlotlyRequire(['plotly'], function(Plotly) {
 
             var data = [{"type":"scatter","x":[1.0,5.0,23.0],"y":[1.0,6.0,9.0],"mode":"lines","line":{},"marker":{}}];
             var layout = {"title":"Hello fsdocs!"};
             var config = {};
-            Plotly.newPlot('d60f9acf-9dfe-4b1d-bd93-565fb0899f2a', data, layout, config);
+            Plotly.newPlot('5a7c1a92-792f-4280-ac17-081fc479e0c6', data, layout, config);
 });
             };
             if ((typeof(requirejs) !==  typeof(Function)) || (typeof(requirejs.config) !== typeof(Function))) {
                 var script = document.createElement("script");
                 script.setAttribute("src", "https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js");
                 script.onload = function(){
-                    renderPlotly_d60f9acf9dfe4b1dbd93565fb0899f2a();
+                    renderPlotly_5a7c1a92792f4280ac17081fc479e0c6();
                 };
                 document.getElementsByTagName("head")[0].appendChild(script);
             }
             else {
-                renderPlotly_d60f9acf9dfe4b1dbd93565fb0899f2a();
+                renderPlotly_5a7c1a92792f4280ac17081fc479e0c6();
             }
 </script>
 

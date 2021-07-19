@@ -3,8 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Including notebooks
-</title>
+    <title>Including notebooks</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Kevin Schneider, fslaborg">
     <link rel="shortcut icon" type="image/x-icon" href="https://fslab.org/docs-template//img/favicon.ico">
@@ -56,30 +55,26 @@
                         <li class="nav-item" id="fsdocs-release-notes-link"><a class="nav-link" href="https://github.com/fslaborg/docs-template/blob/master/RELEASE_NOTES.md">Release Notes</a></li>
                         <li class="nav-item" id="fsdocs-repository-link"><a class="nav-link" href="https://github.com/fslaborg/docs-template/">Source Repository</a></li>
                         <li class="nav-header">
-  Documentation
+  sample content
 </li>             
 <li class="nav-item">
   <a class="nav-link" href="https://fslab.org/docs-template/0_Markdown-Cheatsheet.html">
     Markdown cheatsheet
-
-  </a>
-</li>             
-<li class="nav-item">
-  <a class="nav-link" href="https://fslab.org/docs-template/3_notebooks.html">
-    Including notebooks
-
   </a>
 </li>             
 <li class="nav-item">
   <a class="nav-link" href="https://fslab.org/docs-template/1_fsharp-code-example.html">
     F# code formatting example
-
   </a>
 </li>             
 <li class="nav-item">
   <a class="nav-link" href="https://fslab.org/docs-template/2_inline-references.html">
     Inline package references and charting
-
+  </a>
+</li>             
+<li class="nav-item">
+  <a class="nav-link" href="https://fslab.org/docs-template/3_notebooks.html">
+    Including notebooks
   </a>
 </li>
                         <li class="nav-header">
@@ -97,11 +92,7 @@
         <div class="column is-10 is-paddingless">
             <div class="section pt-4">
                 <div class="container" id="fsdocs-content">
-                    <hr />
-<p>title: Including notebooks
-category: sample content
-categoryindex: 1</p>
-<h2><a name="index-4" class="anchor" href="#index-4">index: 4</a></h2>
+                    
 <h1><a name="Including-notebooks" class="anchor" href="#Including-notebooks">Including notebooks</a></h1>
 <p>To include dotnet interactive notebooks in the ipynb format, it is enough for the <code>_template.ipynb</code> file to simply exist.</p>
 <p>There are however some customization options with fsdocs that move your documentation to the next level:</p>
@@ -143,29 +134,29 @@ myChart |> GenericChart.toChartHTML
 
 <span class="k">let</span> <span onmouseout="hideTip(event, 'fs3', 3)" onmouseover="showTip(event, 'fs3', 3)" class="id">myChart</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs4', 4)" onmouseover="showTip(event, 'fs4', 4)" class="rt">Chart</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs5', 5)" onmouseover="showTip(event, 'fs5', 5)" class="id">Point</span><span class="pn">(</span><span class="pn">[</span><span class="n">1.</span><span class="pn">,</span><span class="n">2.</span><span class="pn">]</span><span class="pn">)</span>
 </code></pre>
-<div id="aac75434-f595-40f8-88a3-c625797a6a3f" style="width: 600px; height: 600px;"><!-- Plotly chart will be drawn inside this DIV --></div>
+<div id="29288a1d-430a-4327-8b3b-27da31de4a62" style="width: 600px; height: 600px;"><!-- Plotly chart will be drawn inside this DIV --></div>
 <script type="text/javascript">
 
-            var renderPlotly_aac75434f59540f888a3c625797a6a3f = function() {
+            var renderPlotly_29288a1d430a43278b3b27da31de4a62 = function() {
             var fsharpPlotlyRequire = requirejs.config({context:'fsharp-plotly',paths:{plotly:'https://cdn.plot.ly/plotly-latest.min'}}) || require;
             fsharpPlotlyRequire(['plotly'], function(Plotly) {
 
             var data = [{"type":"scatter","x":[1.0],"y":[2.0],"mode":"markers","marker":{}}];
             var layout = {};
             var config = {};
-            Plotly.newPlot('aac75434-f595-40f8-88a3-c625797a6a3f', data, layout, config);
+            Plotly.newPlot('29288a1d-430a-4327-8b3b-27da31de4a62', data, layout, config);
 });
             };
             if ((typeof(requirejs) !==  typeof(Function)) || (typeof(requirejs.config) !== typeof(Function))) {
                 var script = document.createElement("script");
                 script.setAttribute("src", "https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js");
                 script.onload = function(){
-                    renderPlotly_aac75434f59540f888a3c625797a6a3f();
+                    renderPlotly_29288a1d430a43278b3b27da31de4a62();
                 };
                 document.getElementsByTagName("head")[0].appendChild(script);
             }
             else {
-                renderPlotly_aac75434f59540f888a3c625797a6a3f();
+                renderPlotly_29288a1d430a43278b3b27da31de4a62();
             }
 </script>
 
