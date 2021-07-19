@@ -1,12 +1,21 @@
+(**
+---
+title: Including notebooks
+category: sample content
+categoryindex: 1
+index: 4
+---
+*)
+
 (***hide***)
 
 (***condition:prepare***)
-#r "nuget: Plotly.NET, 2.0.0-beta5"
+#r "nuget: Plotly.NET, 2.0.0-preview.6"
 
 (***condition:ipynb***)
 #if IPYNB
-#r "nuget: Plotly.NET, 2.0.0-beta5"
-#r "nuget: Plotly.NET.Interactive, 2.0.0-beta5"
+#r "nuget: Plotly.NET, 2.0.0-preview.6"
+#r "nuget: Plotly.NET.Interactive, 2.0.0-preview.6"
 #endif // IPYNB
 
 (**

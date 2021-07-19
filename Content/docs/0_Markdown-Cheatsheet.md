@@ -1,3 +1,10 @@
+---
+title: Markdown cheatsheet
+category: sample content
+categoryindex: 1
+index: 1
+---
+
 # Markdown cheatsheet
 
 **Adapted from https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet**

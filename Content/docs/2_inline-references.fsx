@@ -1,10 +1,19 @@
 (**
+---
+title: Inline package references and charting
+category: sample content
+categoryindex: 1
+index: 3
+---
+*)
+
+(**
 # Inline package references and charting
 
 With fsdocs 8.0, the tool can roll forward to .net 5, meaning you can use inline package references in the docs scripts:
 *)
 
-#r "nuget: Plotly.NET, 2.0.0-alpha5"
+#r "nuget: Plotly.NET, 2.0.0-preview.6"
 
 open Plotly.NET
 

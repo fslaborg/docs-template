@@ -1,4 +1,13 @@
 (**
+---
+title: F# code formatting example
+category: sample content
+categoryindex: 1
+index: 2
+---
+*)
+
+(**
 # F# code formatting example
 
 This page is rendered from a F# script as input, containing real F# code besides this markdown section.
