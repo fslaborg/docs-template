@@ -1,3 +1,8 @@
+## Version 2.0.2 - 7/19/2021
+* update fsdocs version to 11.2.0
+* Use new yaml frontmatter in sample content
+* Underline sidebar headers for better distinction
+
 ## Version 2.0.1 - 4/15/2021
 * install fsdocs as local tool instead of global. 
 
