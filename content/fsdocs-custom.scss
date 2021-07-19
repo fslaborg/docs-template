@@ -122,6 +122,7 @@ $table-cell-heading-color: $primary;
 }
 .nav-header {
     @extend .menu-label;
+    border-bottom: 1px dashed $primary;
     list-style: none;
     color: $primary;
 }

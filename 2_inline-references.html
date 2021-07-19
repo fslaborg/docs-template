@@ -122,29 +122,29 @@ myChart |> GenericChart.toChartHTML
 </pre>
 
 <p>Here is the rendered chart:</p>
-<div id="5a7c1a92-792f-4280-ac17-081fc479e0c6" style="width: 600px; height: 600px;"><!-- Plotly chart will be drawn inside this DIV --></div>
+<div id="5283a2e3-84fd-4eb1-93b9-b998f8140523" style="width: 600px; height: 600px;"><!-- Plotly chart will be drawn inside this DIV --></div>
 <script type="text/javascript">
 
-            var renderPlotly_5a7c1a92792f4280ac17081fc479e0c6 = function() {
+            var renderPlotly_5283a2e384fd4eb193b9b998f8140523 = function() {
             var fsharpPlotlyRequire = requirejs.config({context:'fsharp-plotly',paths:{plotly:'https://cdn.plot.ly/plotly-latest.min'}}) || require;
             fsharpPlotlyRequire(['plotly'], function(Plotly) {
 
             var data = [{"type":"scatter","x":[1.0,5.0,23.0],"y":[1.0,6.0,9.0],"mode":"lines","line":{},"marker":{}}];
             var layout = {"title":"Hello fsdocs!"};
             var config = {};
-            Plotly.newPlot('5a7c1a92-792f-4280-ac17-081fc479e0c6', data, layout, config);
+            Plotly.newPlot('5283a2e3-84fd-4eb1-93b9-b998f8140523', data, layout, config);
 });
             };
             if ((typeof(requirejs) !==  typeof(Function)) || (typeof(requirejs.config) !== typeof(Function))) {
                 var script = document.createElement("script");
                 script.setAttribute("src", "https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js");
                 script.onload = function(){
-                    renderPlotly_5a7c1a92792f4280ac17081fc479e0c6();
+                    renderPlotly_5283a2e384fd4eb193b9b998f8140523();
                 };
                 document.getElementsByTagName("head")[0].appendChild(script);
             }
             else {
-                renderPlotly_5a7c1a92792f4280ac17081fc479e0c6();
+                renderPlotly_5283a2e384fd4eb193b9b998f8140523();
             }
 </script>
 
