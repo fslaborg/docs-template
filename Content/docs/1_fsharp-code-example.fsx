@@ -8,6 +8,13 @@ index: 2
 *)
 
 (**
+
+[![Binder]({{root}}img/badge-binder.svg)](https://mybinder.org/v2/gh/plotly/Plotly.NET/gh-pages?filepath={{fsdocs-source-basename}}.ipynb)&emsp;
+[![Script]({{root}}img/badge-script.svg)]({{root}}{{fsdocs-source-basename}}.fsx)&emsp;
+[![Notebook]({{root}}img/badge-notebook.svg)]({{root}}{{fsdocs-source-basename}}.ipynb)
+
+[How to add these badges?]({{root}}4_download-badges.html)
+
 # F# code formatting example
 
 This page is rendered from a F# script as input, containing real F# code besides this markdown section.

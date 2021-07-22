@@ -8,6 +8,13 @@ index: 3
 *)
 
 (**
+
+[![Binder]({{root}}img/badge-binder.svg)](https://mybinder.org/v2/gh/plotly/Plotly.NET/gh-pages?filepath={{fsdocs-source-basename}}.ipynb)&emsp;
+[![Script]({{root}}img/badge-script.svg)]({{root}}{{fsdocs-source-basename}}.fsx)&emsp;
+[![Notebook]({{root}}img/badge-notebook.svg)]({{root}}{{fsdocs-source-basename}}.ipynb)
+
+[How to add these badges?]({{root}}4_download-badges.html)
+
 # Inline package references and charting
 
 With fsdocs 8.0, the tool can roll forward to .net 5, meaning you can use inline package references in the docs scripts:

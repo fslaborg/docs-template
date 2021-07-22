@@ -1,5 +1,9 @@
-## Version 2.0.2 - 7/19/2021
+## Version 2.0.3 - 7/22/2021
+* Add .fsx template file
 * update fsdocs version to 11.2.0
+* Add instructions for adding download badges
+
+## Version 2.0.2 - 7/19/2021
 * Use new yaml frontmatter in sample content
 * Underline sidebar headers for better distinction
 
