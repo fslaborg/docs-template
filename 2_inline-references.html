@@ -76,6 +76,11 @@
   <a class="nav-link" href="https://fslab.org/docs-template/3_notebooks.html">
     Including notebooks
   </a>
+</li>             
+<li class="nav-item">
+  <a class="nav-link" href="https://fslab.org/docs-template/4_download-badges.html">
+    Adding download badges
+  </a>
 </li>
                         <li class="nav-header">
   API Reference
@@ -93,6 +98,10 @@
             <div class="section pt-4">
                 <div class="container" id="fsdocs-content">
                     
+<p><a href="https://mybinder.org/v2/gh/plotly/Plotly.NET/gh-pages?filepath=2_inline-references.ipynb"><img src="https://fslab.org/docs-template/img/badge-binder.svg" alt="Binder" /></a>&emsp;
+<a href="https://fslab.org/docs-template/2_inline-references.fsx"><img src="https://fslab.org/docs-template/img/badge-script.svg" alt="Script" /></a>&emsp;
+<a href="https://fslab.org/docs-template/2_inline-references.ipynb"><img src="https://fslab.org/docs-template/img/badge-notebook.svg" alt="Notebook" /></a></p>
+<p><a href="https://fslab.org/docs-template/4_download-badges.html">How to add these badges?</a></p>
 <h1><a name="Inline-package-references-and-charting" class="anchor" href="#Inline-package-references-and-charting">Inline package references and charting</a></h1>
 <p>With fsdocs 8.0, the tool can roll forward to .net 5, meaning you can use inline package references in the docs scripts:</p>
 <pre class="fssnip highlighted"><code lang="fsharp"><span class="pp">#r</span> <span class="s">&quot;nuget: Plotly.NET, 2.0.0-preview.6&quot;</span>
@@ -122,29 +131,29 @@ myChart |> GenericChart.toChartHTML
 </pre>
 
 <p>Here is the rendered chart:</p>
-<div id="5283a2e3-84fd-4eb1-93b9-b998f8140523" style="width: 600px; height: 600px;"><!-- Plotly chart will be drawn inside this DIV --></div>
+<div id="858c3bcd-db01-4b6b-b776-7056b8f29840" style="width: 600px; height: 600px;"><!-- Plotly chart will be drawn inside this DIV --></div>
 <script type="text/javascript">
 
-            var renderPlotly_5283a2e384fd4eb193b9b998f8140523 = function() {
+            var renderPlotly_858c3bcddb014b6bb7767056b8f29840 = function() {
             var fsharpPlotlyRequire = requirejs.config({context:'fsharp-plotly',paths:{plotly:'https://cdn.plot.ly/plotly-latest.min'}}) || require;
             fsharpPlotlyRequire(['plotly'], function(Plotly) {
 
             var data = [{"type":"scatter","x":[1.0,5.0,23.0],"y":[1.0,6.0,9.0],"mode":"lines","line":{},"marker":{}}];
             var layout = {"title":"Hello fsdocs!"};
             var config = {};
-            Plotly.newPlot('5283a2e3-84fd-4eb1-93b9-b998f8140523', data, layout, config);
+            Plotly.newPlot('858c3bcd-db01-4b6b-b776-7056b8f29840', data, layout, config);
 });
             };
             if ((typeof(requirejs) !==  typeof(Function)) || (typeof(requirejs.config) !== typeof(Function))) {
                 var script = document.createElement("script");
                 script.setAttribute("src", "https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js");
                 script.onload = function(){
-                    renderPlotly_5283a2e384fd4eb193b9b998f8140523();
+                    renderPlotly_858c3bcddb014b6bb7767056b8f29840();
                 };
                 document.getElementsByTagName("head")[0].appendChild(script);
             }
             else {
-                renderPlotly_5283a2e384fd4eb193b9b998f8140523();
+                renderPlotly_858c3bcddb014b6bb7767056b8f29840();
             }
 </script>
 
