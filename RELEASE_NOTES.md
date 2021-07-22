@@ -1,3 +1,6 @@
+## Version 2.0.4 - 7/22/2021
+* fix some typos in sample content
+
 ## Version 2.0.3 - 7/22/2021
 * Add .fsx template file
 * update fsdocs version to 11.2.0

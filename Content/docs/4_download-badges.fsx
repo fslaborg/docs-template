@@ -10,7 +10,7 @@ index: 5
 (**
 # Adding download badges
 
-## Notebook download
+## Script download
 
 `[![Script]({{root}}img/badge-script.svg)]({{root}}{{fsdocs-source-basename}}.fsx)`
 
@@ -20,7 +20,7 @@ becomes
 
 (you might need to adjust the paths if there are any more levels between `{{root}}` and `img/badge-script.svg` or `{{fsdocs-source-basename}}`)
 
-## Script download
+## Notebook download
 
 `[![Notebook]({{root}}img/badge-notebook.svg)]({{root}}{{fsdocs-source-basename}}.ipynb)`
 
