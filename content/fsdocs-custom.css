@@ -9007,7 +9007,7 @@ strong {
   border-bottom: 2px solid #A00975; }
 
 em {
-  color: #6A9955; }
+  color: #A00975; }
 
 #fsdocs-content ul {
   -webkit-padding-start: 40px;
@@ -9201,5 +9201,8 @@ div.fsdocs-tip {
 div.fsdocs-tip code {
   color: #d1d1d1;
   font: 11pt 'Droid Sans', arial, sans-serif; }
+
+div.fsdocs-tip em {
+  color: #6A9955; }
 
 /*# sourceMappingURL=/home/runner/work/docs-template/docs-template/Content/docs/content/fsdocs-custom.css.map */

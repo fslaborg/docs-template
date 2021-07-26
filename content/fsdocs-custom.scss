@@ -169,8 +169,9 @@ strong {
 }
 
 em {
-    color: $fslabDarkGreen;
+    color: $primary;
 }
+
 
 table {
     @extend .table, .is-striped;
@@ -391,4 +392,8 @@ div.fsdocs-tip {
     div.fsdocs-tip code {
         color: #d1d1d1;
         font: 11pt 'Droid Sans', arial, sans-serif;
+    }
+
+    div.fsdocs-tip em {
+        color: $fslabDarkGreen;
     }
