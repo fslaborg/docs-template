@@ -1,3 +1,6 @@
+## Version 2.1.1 - 7/26/2021
+* Fix em color, adjust em color for snippet tooltips
+
 ## Version 2.1.0 - 7/26/2021
 * Update to fsdocs 11.4.0
 * Add cli switch for script inclusion
