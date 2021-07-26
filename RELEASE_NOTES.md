@@ -1,3 +1,9 @@
+## Version 2.1.0 - 7/26/2021
+* Update to fsdocs 11.4.0
+* Add cli switch for script inclusion
+* Update styles to fit to new fsdocs styles
+* Fix comment color for snippet tooltips
+
 ## Version 2.0.3 - 7/22/2021
 * Add .fsx template file
 * update fsdocs version to 11.2.0
