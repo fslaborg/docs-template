@@ -440,7 +440,12 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /&gt;&lt;/a&gt;
                 </div>
             </div>
         </div>
-        <div class="fsdocs-tip" id="fs1">Multiple items<br />val single : value:&#39;T -&gt; single (requires member op_Explicit)<br /><br />--------------------<br />[&lt;Struct&gt;]<br />type single = System.Single<br /><br />--------------------<br />type single&lt;&#39;Measure&gt; = float32&lt;&#39;Measure&gt;</div>
+        <div class="fsdocs-tip" id="fs1">Multiple items<br />val single : value:&#39;T -&gt; single (requires member op_Explicit)<br /><em>&lt;summary&gt;Converts the argument to 32-bit float.&lt;/summary&gt;<br />&lt;remarks&gt;This is a direct conversion for all 
+ primitive numeric types. For strings, the input is converted using &lt;c&gt;Single.Parse()&lt;/c&gt;  with InvariantCulture settings. Otherwise the operation requires and invokes a &lt;c&gt;ToSingle&lt;/c&gt; method on the input type.&lt;/remarks&gt;</em><br /><br />--------------------<br />[&lt;Struct&gt;]
+type single = System.Single<br /><em>&lt;summary&gt;An abbreviation for the CLI type &lt;see cref=&quot;T:System.Single&quot; /&gt;. Identical to &lt;see cref=&quot;T:Microsoft.FSharp.Core.float32&quot; /&gt;.&lt;/summary&gt;<br />&lt;category&gt;Basic Types&lt;/category&gt;</em><br /><br />--------------------<br />type single&lt;&#39;Measure&gt; = float32&lt;&#39;Measure&gt;<br /><em>&lt;summary&gt;The type of single-precision floating point numbers, annotated with a unit of measure. 
+ The unit of measure is erased in compiled code and when values of this type
+ are analyzed using reflection. The type is representationally equivalent to 
+ &lt;see cref=&quot;T:System.Single&quot; /&gt;.&lt;/summary&gt;<br />&lt;category index=&quot;6&quot;&gt;Basic Types with Units of Measure&lt;/category&gt;</em></div>
 
     </div>
 
