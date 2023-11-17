@@ -71,7 +71,3 @@
 .pre {
     border: 1px solid var(--fslab-magenta);
 }
-
-[data-theme="dark"] {
-    --primary: var(--fslab-magenta);
-}
