@@ -1,88 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-root="https://fslab.org/docs-template/">
 <head>
-    <meta charset="utf-8">
-    <title>Markdown cheatsheet</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="Kevin Schneider, fslaborg">
-    <link rel="shortcut icon" type="image/x-icon" href="https://fslab.org/docs-template//img/favicon.ico">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script> -->
-
-    <link type="text/css" rel="stylesheet" href="https://fslab.org/docs-template/content/fsdocs-default.css" />
-    <link type="text/css" rel="stylesheet" href="https://fslab.org/docs-template/content/fsdocs-custom.css" />
-    <script type="text/javascript" src="https://fslab.org/docs-template/content/fsdocs-tips.js"></script>
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!-- BEGIN SEARCH BOX: this adds support for the search box -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/JavaScript-autoComplete/1.0.4/auto-complete.css" />
-    <!-- END SEARCH BOX: this adds support for the search box -->
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Kevin Schneider, fslaborg" name="author">
+    <title>Markdown cheatsheet | docs-template</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link href="https://fslab.org/docs-template/img/favicon.ico" rel="icon" sizes="32x32" type="image/png"/>
+    <link href="https://fslab.org/docs-template/content/fsdocs-default.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fslab.org/docs-template/content/fsdocs-theme.css" rel="stylesheet" type="text/css"/>
     
-</head> 
-
-<body>
-    <div class="columns is-fullheight m-0">
-        <div id="fsdocs-menu" class="column is-2 is-paddingless">
-            <aside class="menu">
-                <div class="container is-paddingless is-marginless has-background-dark">
-                    <a href="https://fslab.org/docs-template/">
-                        <figure class="image is-128x128 container">
-                            <img src="https://fslab.org/docs-template/img/logo.png">
-                        </figure>
-                    </a>
-                    <h2 class="title has-text-centered has-text-white pb-4">docs-template</h2>
-                </div>
-                <div class="content">
-                    <!-- BEGIN SEARCH BOX: this adds support for the search box -->
-                    <div id="header">
-                        <div class="field">
-                            <div class="control has-icons-left has-icons-right searchbox" id="fsdocs-searchbox">
-                                <input data-search-input="" id="search-by" type="search" placeholder="Search..." class="input"/>
-                                <span class="icon is-small is-left">
-                                    <i class="fas fa-search"></i>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END SEARCH BOX: this adds support for the search box -->
-                    <ul class="navbar-nav">
-                        <li class="nav-header">Links</li>
-                        <li class="nav-item" id="fsdocs-license-link"><a class="nav-link" href="https://github.com/fslaborg/docs-template/blob/master/LICENSE">License (MIT)</a></li>
-                        <li class="nav-item" id="fsdocs-release-notes-link"><a class="nav-link" href="https://github.com/fslaborg/docs-template/blob/master/RELEASE_NOTES.md">Release Notes</a></li>
-                        <li class="nav-item" id="fsdocs-repository-link"><a class="nav-link" href="https://github.com/fslaborg/docs-template/">Source Repository</a></li>
-                        <li class="nav-header">
+    
+</head>
+<body class="content">
+<header>
+    <div class="start">
+        <div id="menu-toggle">
+            <iconify-icon class="icon closed" height="22" icon="eva:menu-fill" width="22"></iconify-icon>
+            <iconify-icon class="icon open" height="22" icon="mi:close" width="22"></iconify-icon>
+            <input type="checkbox" name="mobile-menu" />
+            <ul class="menu">
+                <li class="nav-header">Links</li>
+                <li class="nav-item"><a class="nav-link" href="https://github.com/fslaborg/docs-template/blob/master/LICENSE">License</a>
+                </li>
+                <li class="nav-item"><a class="nav-link"
+                                        href="https://github.com/fslaborg/docs-template/blob/master/RELEASE_NOTES.md">Release
+                    Notes</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://github.com/fslaborg/docs-template/">Source
+                    Repository</a></li>
+                <li class="nav-header active">
   sample content
 </li>             
-<li class="nav-item">
-  <a class="nav-link" href="https://fslab.org/docs-template/0_Markdown-Cheatsheet.html">
+<li class="nav-item active">
+  <a class="nav-link" href="https://fslab.org/docs-template/markdown-cheetsheet.html">
     Markdown cheatsheet
   </a>
 </li>             
-<li class="nav-item">
-  <a class="nav-link" href="https://fslab.org/docs-template/1_fsharp-code-example.html">
+<li class="nav-item ">
+  <a class="nav-link" href="https://fslab.org/docs-template/fsharp-code-example.html">
     F# code formatting example
   </a>
 </li>             
-<li class="nav-item">
-  <a class="nav-link" href="https://fslab.org/docs-template/2_inline-references.html">
+<li class="nav-item ">
+  <a class="nav-link" href="https://fslab.org/docs-template/inline-references.html">
     Inline package references and charting
   </a>
 </li>             
-<li class="nav-item">
-  <a class="nav-link" href="https://fslab.org/docs-template/3_notebooks.html">
+<li class="nav-item ">
+  <a class="nav-link" href="https://fslab.org/docs-template/notebooks.html">
     Including notebooks
   </a>
 </li>             
-<li class="nav-item">
-  <a class="nav-link" href="https://fslab.org/docs-template/4_download-badges.html">
+<li class="nav-item ">
+  <a class="nav-link" href="https://fslab.org/docs-template/download-badges.html">
     Adding download badges
   </a>
 </li>
-                        <li class="nav-header">
+                <li class="nav-header">
   API Reference
 </li>             
 <li class="nav-item">
@@ -90,31 +68,127 @@
     All Namespaces
   </a>
 </li>
-                    </ul>
-                </div>
-            </aside>
+            </ul>
         </div>
-        <div class="column is-10 is-paddingless">
-            <div class="section pt-4">
-                <div class="container" id="fsdocs-content">
-                    
+        <a href="https://fslab.org/docs-template/">
+            <img alt="Header menu logo" src="https://fslab.org/docs-template/img/logo.png">
+            <strong>docs-template</strong>
+        </a>
+    </div>
+    <div class="end">
+        <a href="https://github.com/fslaborg/docs-template/" target="_blank">
+            <iconify-icon icon="uil:github" width="26" height="26"></iconify-icon>
+        </a>
+        <iconify-icon id="search-btn" icon="carbon:search" class="search" width="24" height="24"></iconify-icon>
+        <fsdocs-theme-toggle></fsdocs-theme-toggle>
+    </div>
+</header>
+<aside id="fsdocs-main-menu">
+    <ul class="menu">
+        <li class="nav-header">Links</li>
+        <li class="nav-item"><a class="nav-link" href="https://github.com/fslaborg/docs-template/blob/master/LICENSE">License</a>
+        </li>
+        <li class="nav-item"><a class="nav-link"
+                                href="https://github.com/fslaborg/docs-template/blob/master/RELEASE_NOTES.md">Release
+            Notes</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://github.com/fslaborg/docs-template/">Source
+            Repository</a></li>
+        <li class="nav-header active">
+  sample content
+</li>             
+<li class="nav-item active">
+  <a class="nav-link" href="https://fslab.org/docs-template/markdown-cheetsheet.html">
+    Markdown cheatsheet
+  </a>
+</li>             
+<li class="nav-item ">
+  <a class="nav-link" href="https://fslab.org/docs-template/fsharp-code-example.html">
+    F# code formatting example
+  </a>
+</li>             
+<li class="nav-item ">
+  <a class="nav-link" href="https://fslab.org/docs-template/inline-references.html">
+    Inline package references and charting
+  </a>
+</li>             
+<li class="nav-item ">
+  <a class="nav-link" href="https://fslab.org/docs-template/notebooks.html">
+    Including notebooks
+  </a>
+</li>             
+<li class="nav-item ">
+  <a class="nav-link" href="https://fslab.org/docs-template/download-badges.html">
+    Adding download badges
+  </a>
+</li>
+        <li class="nav-header">
+  API Reference
+</li>             
+<li class="nav-item">
+  <a class="nav-link" href="https://fslab.org/docs-template/reference/index.html">
+    All Namespaces
+  </a>
+</li>
+    </ul>
+</aside>
+<main>
+    <div id="content">
+        
 <h1><a name="Markdown-cheatsheet" class="anchor" href="#Markdown-cheatsheet">Markdown cheatsheet</a></h1>
 <p><strong>Adapted from <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet</a></strong></p>
 <p>This is intended as a quick reference and showcase. For more complete info, see <a href="http://daringfireball.net/projects/markdown/">John Gruber's original spec</a> and the <a href="http://github.github.com/github-flavored-markdown/">Github-flavored Markdown info page</a>.</p>
 <h3><a name="Table-of-Contents" class="anchor" href="#Table-of-Contents">Table of Contents</a></h3>
 <ul>
-<li><a href="#Headers">Headers</a></li>
-<li><a href="#Emphasis">Emphasis</a></li>
-<li><a href="#Lists">Lists</a></li>
-<li><a href="#Links">Links</a></li>
-<li><a href="#Images">Images</a></li>
-<li><a href="#Code-and-Syntax-Highlighting">Code and Syntax Highlighting</a></li>
-<li><a href="#Tables">Tables</a></li>
-<li><a href="#Blockquotes">Blockquotes</a></li>
-<li><a href="#Inline-HTML">Inline HTML</a></li>
-<li><a href="#Horizontal-Rule">Horizontal Rule</a></li>
-<li><a href="#Line-Breaks">Line Breaks</a></li>
-<li><a href="#YouTube-Videos">YouTube Videos</a></li>
+<li>
+<a href="#markdown-cheatsheet">Markdown cheatsheet</a>
+<ul>
+<li><a href="#table-of-contents">Table of Contents</a></li>
+</ul>
+</li>
+<li><a href="#headers">Headers</a></li>
+<li>
+<a href="#h1">H1</a>
+<ul>
+<li>
+<a href="#h2">H2</a>
+<ul>
+<li>
+<a href="#h3">H3</a>
+<ul>
+<li>
+<a href="#h4">H4</a>
+<ul>
+<li>
+<a href="#h5">H5</a>
+<ul>
+<li><a href="#h6">H6</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#alt-h1">Alt-H1</a>
+<ul>
+<li><a href="#alt-h2">Alt-H2</a></li>
+<li><a href="#emphasis">Emphasis</a></li>
+<li><a href="#lists">Lists</a></li>
+<li><a href="#links">Links</a></li>
+<li><a href="#images">Images</a></li>
+<li><a href="#code-and-syntax-highlighting">Code and Syntax Highlighting</a></li>
+<li><a href="#tables">Tables</a></li>
+<li><a href="#blockquotes">Blockquotes</a></li>
+<li><a href="#inline-html">Inline HTML</a></li>
+<li><a href="#horizontal-rule">Horizontal Rule</a></li>
+<li><a href="#line-breaks">Line Breaks</a></li>
+<li><a href="#youtube-videos">YouTube Videos</a></li>
+</ul>
+</li>
 </ul>
 <h2><a name="Headers" class="anchor" href="#Headers">Headers</a></h2>
 <table class="pre"><tr><td class="snippet"><pre class="fssnip"><code lang="no-highlight"># H1
@@ -246,8 +320,6 @@ Reference-style:
 <p>Here's our logo (hover to see the title text):</p>
 <p>Inline-style:
 <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" alt="alt text" title="Logo Title Text 1" /></p>
-<p>Reference-style:
-<img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" alt="alt text" title="Logo Title Text 2" /></p>
 <h2><a name="Code-and-Syntax-Highlighting" class="anchor" href="#Code-and-Syntax-Highlighting">Code and Syntax Highlighting</a></h2>
 <p>Code blocks are part of the Markdown spec, but syntax highlighting isn't. However, many renderers -- like Github's and <em>FSharp.Formatting</em> -- support syntax highlighting. Which languages are supported and how those language names should be written will vary from renderer to renderer.</p>
 <table class="pre"><tr><td class="snippet"><pre class="fssnip"><code lang="no-highlight">Inline `code` has `back-ticks around` it.
@@ -437,25 +509,136 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /&gt;&lt;/a&gt;
 <hr />
 <p>License: <a href="https://creativecommons.org/licenses/by/3.0/">CC-BY</a></p>
 
-                </div>
-            </div>
-        </div>
-        <div class="fsdocs-tip" id="fs1">Multiple items<br />val single : value:&#39;T -&gt; single (requires member op_Explicit)<br /><em>&lt;summary&gt;Converts the argument to 32-bit float.&lt;/summary&gt;<br />&lt;remarks&gt;This is a direct conversion for all 
- primitive numeric types. For strings, the input is converted using &lt;c&gt;Single.Parse()&lt;/c&gt;  with InvariantCulture settings. Otherwise the operation requires and invokes a &lt;c&gt;ToSingle&lt;/c&gt; method on the input type.&lt;/remarks&gt;</em><br /><br />--------------------<br />[&lt;Struct&gt;]
-type single = System.Single<br /><em>&lt;summary&gt;An abbreviation for the CLI type &lt;see cref=&quot;T:System.Single&quot; /&gt;. Identical to &lt;see cref=&quot;T:Microsoft.FSharp.Core.float32&quot; /&gt;.&lt;/summary&gt;<br />&lt;category&gt;Basic Types&lt;/category&gt;</em><br /><br />--------------------<br />type single&lt;&#39;Measure&gt; = float32&lt;&#39;Measure&gt;<br /><em>&lt;summary&gt;The type of single-precision floating point numbers, annotated with a unit of measure. 
- The unit of measure is erased in compiled code and when values of this type
- are analyzed using reflection. The type is representationally equivalent to 
- &lt;see cref=&quot;T:System.Single&quot; /&gt;.&lt;/summary&gt;<br />&lt;category index=&quot;6&quot;&gt;Basic Types with Units of Measure&lt;/category&gt;</em></div>
+        <div class="fsdocs-tip" id="fs1">Multiple items<br />val single: value: &#39;T -&gt; single (requires member op_Explicit)<br /><br />--------------------<br />type single = System.Single<br /><br />--------------------<br />type single&lt;&#39;Measure&gt; = float32&lt;&#39;Measure&gt;</div>
 
     </div>
+</main>
+<aside id="fsdocs-page-menu">
+    <p>On this page</p>
+    <ul>
+  <li class="level-1">
+    <a href="#Markdown-cheatsheet">
+      Markdown cheatsheet
+    </a>
+  </li>
+  <li class="level-3">
+    <a href="#Table-of-Contents">
+      Table of Contents
+    </a>
+  </li>
+  <li class="level-2">
+    <a href="#Headers">
+      Headers
+    </a>
+  </li>
+  <li class="level-1">
+    <a href="#H1">
+      H1
+    </a>
+  </li>
+  <li class="level-2">
+    <a href="#H2">
+      H2
+    </a>
+  </li>
+  <li class="level-3">
+    <a href="#H3">
+      H3
+    </a>
+  </li>
+  <li class="level-4">
+    <a href="#H4">
+      H4
+    </a>
+  </li>
+  <li class="level-5">
+    <a href="#H5">
+      H5
+    </a>
+  </li>
+  <li class="level-6">
+    <a href="#H6">
+      H6
+    </a>
+  </li>
+  <li class="level-1">
+    <a href="#Alt-H1">
+      Alt-H1
+    </a>
+  </li>
+  <li class="level-2">
+    <a href="#Alt-H2">
+      Alt-H2
+    </a>
+  </li>
+  <li class="level-2">
+    <a href="#Emphasis">
+      Emphasis
+    </a>
+  </li>
+  <li class="level-2">
+    <a href="#Lists">
+      Lists
+    </a>
+  </li>
+  <li class="level-2">
+    <a href="#Links">
+      Links
+    </a>
+  </li>
+  <li class="level-2">
+    <a href="#Images">
+      Images
+    </a>
+  </li>
+  <li class="level-2">
+    <a href="#Code-and-Syntax-Highlighting">
+      Code and Syntax Highlighting
+    </a>
+  </li>
+  <li class="level-2">
+    <a href="#Tables">
+      Tables
+    </a>
+  </li>
+  <li class="level-2">
+    <a href="#Blockquotes">
+      Blockquotes
+    </a>
+  </li>
+  <li class="level-2">
+    <a href="#Inline-HTML">
+      Inline HTML
+    </a>
+  </li>
+  <li class="level-2">
+    <a href="#Horizontal-Rule">
+      Horizontal Rule
+    </a>
+  </li>
+  <li class="level-2">
+    <a href="#Line-Breaks">
+      Line Breaks
+    </a>
+  </li>
+  <li class="level-2">
+    <a href="#YouTube-Videos">
+      YouTube Videos
+    </a>
+  </li>
+</ul>
+</aside>
+<dialog>
+    <input type="search" placeholder="Search docs" />
+    <div class="results">
+        <ul></ul>
+        <p class="empty">Type something to start searching.</p>
+    </div>
+</dialog>
+<script type="module" src="https://fslab.org/docs-template/content/fsdocs-tips.js"></script>
+<script type="module" src="https://fslab.org/docs-template/content/fsdocs-theme-toggle.js"></script>
+<script type="module" src="https://fslab.org/docs-template/content/fsdocs-theme.js"></script>
+<script type="module" src="https://fslab.org/docs-template/content/fsdocs-search.js"></script>
 
-    <!-- BEGIN SEARCH BOX: this adds support for the search box -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/JavaScript-autoComplete/1.0.4/auto-complete.css" />
-    <script type="text/javascript">var fsdocs_search_baseurl = 'https://fslab.org/docs-template/'</script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.8/lunr.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/JavaScript-autoComplete/1.0.4/auto-complete.min.js"></script>
-    <script type="text/javascript" src="https://fslab.org/docs-template/content/fsdocs-search.js"></script>
-    <!-- END SEARCH BOX: this adds support for the search box -->
 </body>
-
 </html>

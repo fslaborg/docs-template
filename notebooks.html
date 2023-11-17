@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" data-root="https://fslab.org/docs-template/">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Kevin Schneider, fslaborg" name="author">
+    <title>Including notebooks | docs-template</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link href="https://fslab.org/docs-template/img/favicon.ico" rel="icon" sizes="32x32" type="image/png"/>
+    <link href="https://fslab.org/docs-template/content/fsdocs-default.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fslab.org/docs-template/content/fsdocs-theme.css" rel="stylesheet" type="text/css"/>
+    
+    
+</head>
+<body class="content">
+<header>
+    <div class="start">
+        <div id="menu-toggle">
+            <iconify-icon class="icon closed" height="22" icon="eva:menu-fill" width="22"></iconify-icon>
+            <iconify-icon class="icon open" height="22" icon="mi:close" width="22"></iconify-icon>
+            <input type="checkbox" name="mobile-menu" />
+            <ul class="menu">
+                <li class="nav-header">Links</li>
+                <li class="nav-item"><a class="nav-link" href="https://github.com/fslaborg/docs-template/blob/master/LICENSE">License</a>
+                </li>
+                <li class="nav-item"><a class="nav-link"
+                                        href="https://github.com/fslaborg/docs-template/blob/master/RELEASE_NOTES.md">Release
+                    Notes</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://github.com/fslaborg/docs-template/">Source
+                    Repository</a></li>
+                <li class="nav-header active">
+  sample content
+</li>             
+<li class="nav-item ">
+  <a class="nav-link" href="https://fslab.org/docs-template/markdown-cheetsheet.html">
+    Markdown cheatsheet
+  </a>
+</li>             
+<li class="nav-item ">
+  <a class="nav-link" href="https://fslab.org/docs-template/fsharp-code-example.html">
+    F# code formatting example
+  </a>
+</li>             
+<li class="nav-item ">
+  <a class="nav-link" href="https://fslab.org/docs-template/inline-references.html">
+    Inline package references and charting
+  </a>
+</li>             
+<li class="nav-item active">
+  <a class="nav-link" href="https://fslab.org/docs-template/notebooks.html">
+    Including notebooks
+  </a>
+</li>             
+<li class="nav-item ">
+  <a class="nav-link" href="https://fslab.org/docs-template/download-badges.html">
+    Adding download badges
+  </a>
+</li>
+                <li class="nav-header">
+  API Reference
+</li>             
+<li class="nav-item">
+  <a class="nav-link" href="https://fslab.org/docs-template/reference/index.html">
+    All Namespaces
+  </a>
+</li>
+            </ul>
+        </div>
+        <a href="https://fslab.org/docs-template/">
+            <img alt="Header menu logo" src="https://fslab.org/docs-template/img/logo.png">
+            <strong>docs-template</strong>
+        </a>
+    </div>
+    <div class="end">
+        <a href="https://github.com/fslaborg/docs-template/" target="_blank">
+            <iconify-icon icon="uil:github" width="26" height="26"></iconify-icon>
+        </a>
+        <iconify-icon id="search-btn" icon="carbon:search" class="search" width="24" height="24"></iconify-icon>
+        <fsdocs-theme-toggle></fsdocs-theme-toggle>
+    </div>
+</header>
+<aside id="fsdocs-main-menu">
+    <ul class="menu">
+        <li class="nav-header">Links</li>
+        <li class="nav-item"><a class="nav-link" href="https://github.com/fslaborg/docs-template/blob/master/LICENSE">License</a>
+        </li>
+        <li class="nav-item"><a class="nav-link"
+                                href="https://github.com/fslaborg/docs-template/blob/master/RELEASE_NOTES.md">Release
+            Notes</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://github.com/fslaborg/docs-template/">Source
+            Repository</a></li>
+        <li class="nav-header active">
+  sample content
+</li>             
+<li class="nav-item ">
+  <a class="nav-link" href="https://fslab.org/docs-template/markdown-cheetsheet.html">
+    Markdown cheatsheet
+  </a>
+</li>             
+<li class="nav-item ">
+  <a class="nav-link" href="https://fslab.org/docs-template/fsharp-code-example.html">
+    F# code formatting example
+  </a>
+</li>             
+<li class="nav-item ">
+  <a class="nav-link" href="https://fslab.org/docs-template/inline-references.html">
+    Inline package references and charting
+  </a>
+</li>             
+<li class="nav-item active">
+  <a class="nav-link" href="https://fslab.org/docs-template/notebooks.html">
+    Including notebooks
+  </a>
+</li>             
+<li class="nav-item ">
+  <a class="nav-link" href="https://fslab.org/docs-template/download-badges.html">
+    Adding download badges
+  </a>
+</li>
+        <li class="nav-header">
+  API Reference
+</li>             
+<li class="nav-item">
+  <a class="nav-link" href="https://fslab.org/docs-template/reference/index.html">
+    All Namespaces
+  </a>
+</li>
+    </ul>
+</aside>
+<main>
+    <div id="content">
+        
+<p><a href="https://mybinder.org/v2/gh/plotly/Plotly.NET/gh-pages?filepath=notebooks.ipynb"><img src="https://fslab.org/docs-template/img/badge-binder.svg" alt="Binder" /></a>&emsp;
+<a href="https://fslab.org/docs-template/notebooks.fsx"><img src="https://fslab.org/docs-template/img/badge-script.svg" alt="Script" /></a>&emsp;
+<a href="https://fslab.org/docs-template/notebooks.ipynb"><img src="https://fslab.org/docs-template/img/badge-notebook.svg" alt="Notebook" /></a></p>
+<p><a href="https://fslab.org/docs-template/4_download-badges.html">How to add these badges?</a></p>
+<h1><a name="Including-notebooks" class="anchor" href="#Including-notebooks">Including notebooks</a></h1>
+<p>To include dotnet interactive notebooks in the ipynb format, it is enough for the <code>_template.ipynb</code> file to simply exist.</p>
+<p>There are however some customization options with fsdocs that move your documentation to the next level:</p>
+<h2><a name="Conditional-package-references" class="anchor" href="#Conditional-package-references">Conditional package references</a></h2>
+<p>use the IPYNB compiler directive in conjuntion with <code>condition:ipynb</code> to include blocks only in the rendered notebook file.</p>
+<p>This is especially usefull for referencing packages that otherwise be referenced locally during yopur buildchain:</p>
+
+<pre>
+#r "/path/to/your/binaries/during/local/build"
+
+(***condition:ipynb***)
+#if IPYNB
+#r "nuget: yourProjectOnNuget, 1.3.3.7"
+#endif // IPYNB
+</pre>
+
+<h2><a name="Conditional-value-inclusion" class="anchor" href="#Conditional-value-inclusion">Conditional value inclusion</a></h2>
+<p>Sometimes the content you want to include might differ aswell. An example is Plotly.NET charts.
+While you want to dump the chart html directly into the html docs via (<code>include-it-raw</code>),
+you want to end cells in notebooks with the chart value itself to include the chart in the output cell with Plotly.NET.Interactive.</p>
+<p>Here is an example for such an conditional block:</p>
+
+<pre>
+open Plotly.NET
+
+let myChart = Chart.Point([1.,2.])
+
+(***condition:ipynb***)
+#if IPYNB
+myChart
+#endif // IPYNB
+
+(***hide***)
+myChart |> GenericChart.toChartHTML
+(***include-it-raw***)
+</pre>
+
+<pre class="fssnip highlighted"><code lang="fsharp"><span class="k">open</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="id">Plotly</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="id">NET</span>
+
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs3', 3)" onmouseover="showTip(event, 'fs3', 3)" class="id">myChart</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs4', 4)" onmouseover="showTip(event, 'fs4', 4)" class="rt">Chart</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs5', 5)" onmouseover="showTip(event, 'fs5', 5)" class="id">Point</span><span class="pn">(</span><span class="pn">[</span><span class="n">1.</span><span class="pn">,</span><span class="n">2.</span><span class="pn">]</span><span class="pn">)</span>
+</code></pre>
+<div id="9580b243-6bc4-471a-b671-6d657b4cf136" style="width: 600px; height: 600px;"><!-- Plotly chart will be drawn inside this DIV --></div>
+<script type="text/javascript">
+
+            var renderPlotly_9580b2436bc4471ab6716d657b4cf136 = function() {
+            var fsharpPlotlyRequire = requirejs.config({context:'fsharp-plotly',paths:{plotly:'https://cdn.plot.ly/plotly-latest.min'}}) || require;
+            fsharpPlotlyRequire(['plotly'], function(Plotly) {
+
+            var data = [{"type":"scatter","x":[1.0],"y":[2.0],"mode":"markers","marker":{}}];
+            var layout = {};
+            var config = {};
+            Plotly.newPlot('9580b243-6bc4-471a-b671-6d657b4cf136', data, layout, config);
+});
+            };
+            if ((typeof(requirejs) !==  typeof(Function)) || (typeof(requirejs.config) !== typeof(Function))) {
+                var script = document.createElement("script");
+                script.setAttribute("src", "https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js");
+                script.onload = function(){
+                    renderPlotly_9580b2436bc4471ab6716d657b4cf136();
+                };
+                document.getElementsByTagName("head")[0].appendChild(script);
+            }
+            else {
+                renderPlotly_9580b2436bc4471ab6716d657b4cf136();
+            }
+</script>
+
+<h2><a name="Including-binder-links" class="anchor" href="#Including-binder-links">Including binder links</a></h2>
+<p><a href="">Binder</a> is an awesome project that launches an instance of your notebook given the correct <code>Dockerfile</code> and <code>nuget.config</code>, which will be added automatically by the <code>fsdocs</code> tool when you build the docs.</p>
+<p>you can include a binder link like this (supposed you use gh-pages to host your docs):</p>
+<pre class="fssnip highlighted"><code lang="fsharp"><span class="pn">[</span><span class="o">!</span><span class="pn">[</span><span class="id">Binder</span><span class="pn">]</span><span class="pn">(</span><span class="id">https</span><span class="pn">:</span><span class="c">//mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/&lt;YOUR-ORG&gt;/&lt;YOUR-PROJECT&gt;/gh-pages?filepath=&lt;YOUR-DOCS-FILENAME&gt;.ipynb)</span>
+</code></pre>
+<p>In fact, you can use this link here to check the conditionals of this very page in a notebook:</p>
+<p><a href="https://mybinder.org/v2/gh/fslaborg/docs-template/gh-pages?filepath=3_notebooks.ipynb.ipynb"><img src="https://mybinder.org/badge_logo.svg" alt="Binder" /></a></p>
+
+        <div class="fsdocs-tip" id="fs1">namespace Plotly</div>
+<div class="fsdocs-tip" id="fs2">namespace Plotly.NET</div>
+<div class="fsdocs-tip" id="fs3">val myChart: GenericChart.GenericChart</div>
+<div class="fsdocs-tip" id="fs4">type Chart =
+  static member Area: x: #IConvertible seq * y: #IConvertible seq * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Name: string * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?ShowMarkers: bool * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Showlegend: bool * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?MarkerSymbol: Symbol * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Color: string * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Opacity: float * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Labels: #IConvertible seq * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?TextPosition: TextPosition * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?TextFont: Font * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Dash: DrawingStyle * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Width: float -&gt; GenericChart + 1 overload
+  static member Bar: keys: #IConvertible seq * values: #IConvertible seq * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Name: string * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Showlegend: bool * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Color: string * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Opacity: float * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Labels: #IConvertible seq * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?TextPosition: TextPosition * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?TextFont: Font * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Marker: Marker -&gt; GenericChart + 1 overload
+  static member BoxPlot: [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?x: &#39;a0 * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?y: &#39;a1 * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Name: string * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Showlegend: bool * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Color: string * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Fillcolor: &#39;a2 * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Opacity: float * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Whiskerwidth: &#39;a3 * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Boxpoints: Boxpoints * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Boxmean: BoxMean * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Jitter: &#39;a4 * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Pointpos: &#39;a5 * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Orientation: Orientation * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Marker: Marker * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Line: Line * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Alignmentgroup: &#39;a6 * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Offsetgroup: &#39;a7 * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Notched: bool * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?NotchWidth: float * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?QuartileMethod: QuartileMethod -&gt; GenericChart + 1 overload
+  static member Bubble: x: #IConvertible seq * y: #IConvertible seq * sizes: #IConvertible seq * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Name: string * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Showlegend: bool * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?MarkerSymbol: Symbol * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Color: string * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Opacity: float * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Labels: #IConvertible seq * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?TextPosition: TextPosition * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?TextFont: Font * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?StackGroup: string * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Orientation: Orientation * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?GroupNorm: GroupNorm * [&lt;Optional; DefaultParameterValue ((false :&gt; obj))&gt;] ?UseWebGL: bool -&gt; GenericChart + 1 overload
+  static member Candlestick: ``open`` : #IConvertible seq * high: #IConvertible seq * low: #IConvertible seq * close: #IConvertible seq * x: #IConvertible seq * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Increasing: Line * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Decreasing: Line * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?WhiskerWidth: float * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Line: Line * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?XCalendar: Calendar -&gt; GenericChart + 1 overload
+  static member ChoroplethMap: locations: string seq * z: #IConvertible seq * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Text: #IConvertible seq * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Locationmode: LocationFormat * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Autocolorscale: bool * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Colorscale: Colorscale * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Colorbar: Colorbar * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Marker: Marker * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?GeoJson: &#39;a2 * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?FeatureIdKey: string * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Zmin: float * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Zmax: float -&gt; GenericChart
+  static member ChoroplethMapbox: locations: #IConvertible seq * z: #IConvertible seq * geoJson: &#39;a2 * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?FeatureIdKey: string * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Text: #IConvertible seq * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Below: string * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Colorscale: Colorscale * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Colorbar: Colorbar * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?ZAuto: bool * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?ZMin: float * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?ZMid: float * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?ZMax: float -&gt; GenericChart
+  static member Column: keys: #IConvertible seq * values: #IConvertible seq * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Name: string * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Showlegend: bool * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Color: string * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Opacity: float * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Labels: #IConvertible seq * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?TextPosition: TextPosition * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?TextFont: Font * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Marker: Marker -&gt; GenericChart + 1 overload
+  static member Contour: data: #(&#39;a1 seq) seq * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?X: #IConvertible seq * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Y: #IConvertible seq * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Name: string * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Showlegend: bool * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Opacity: float * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Colorscale: Colorscale * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Showscale: &#39;a4 * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?zSmooth: SmoothAlg * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Colorbar: &#39;a5 -&gt; GenericChart (requires &#39;a1 :&gt; IConvertible)
+  static member DensityMapbox: lon: #IConvertible seq * lat: #IConvertible seq * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Z: #IConvertible seq * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Radius: float * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Opacity: float * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Text: #IConvertible seq * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Below: string * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Colorscale: Colorscale * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Colorbar: Colorbar * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?Showscale: bool * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?ZAuto: bool * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?ZMin: float * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?ZMid: float * [&lt;Optional; DefaultParameterValue ((null :&gt; obj))&gt;] ?ZMax: float -&gt; GenericChart + 1 overload
+  ...<br /><em>&lt;summary&gt;
+ Provides a set of static methods for creating charts.
+&lt;/summary&gt;</em></div>
+<div class="fsdocs-tip" id="fs5">static member Chart.Point: xy: (#System.IConvertible * #System.IConvertible) seq * [&lt;System.Runtime.InteropServices.Optional; System.Runtime.InteropServices.DefaultParameterValue ((null :&gt; obj))&gt;] ?Name: string * [&lt;System.Runtime.InteropServices.Optional; System.Runtime.InteropServices.DefaultParameterValue ((null :&gt; obj))&gt;] ?Showlegend: bool * [&lt;System.Runtime.InteropServices.Optional; System.Runtime.InteropServices.DefaultParameterValue ((null :&gt; obj))&gt;] ?MarkerSymbol: StyleParam.Symbol * [&lt;System.Runtime.InteropServices.Optional; System.Runtime.InteropServices.DefaultParameterValue ((null :&gt; obj))&gt;] ?Color: string * [&lt;System.Runtime.InteropServices.Optional; System.Runtime.InteropServices.DefaultParameterValue ((null :&gt; obj))&gt;] ?Opacity: float * [&lt;System.Runtime.InteropServices.Optional; System.Runtime.InteropServices.DefaultParameterValue ((null :&gt; obj))&gt;] ?Labels: #System.IConvertible seq * [&lt;System.Runtime.InteropServices.Optional; System.Runtime.InteropServices.DefaultParameterValue ((null :&gt; obj))&gt;] ?TextPosition: StyleParam.TextPosition * [&lt;System.Runtime.InteropServices.Optional; System.Runtime.InteropServices.DefaultParameterValue ((null :&gt; obj))&gt;] ?TextFont: Font * [&lt;System.Runtime.InteropServices.Optional; System.Runtime.InteropServices.DefaultParameterValue ((null :&gt; obj))&gt;] ?StackGroup: string * [&lt;System.Runtime.InteropServices.Optional; System.Runtime.InteropServices.DefaultParameterValue ((null :&gt; obj))&gt;] ?Orientation: StyleParam.Orientation * [&lt;System.Runtime.InteropServices.Optional; System.Runtime.InteropServices.DefaultParameterValue ((null :&gt; obj))&gt;] ?GroupNorm: StyleParam.GroupNorm * [&lt;System.Runtime.InteropServices.Optional; System.Runtime.InteropServices.DefaultParameterValue ((false :&gt; obj))&gt;] ?UseWebGL: bool -&gt; GenericChart.GenericChart<br />static member Chart.Point: x: #System.IConvertible seq * y: #System.IConvertible seq * [&lt;System.Runtime.InteropServices.Optional; System.Runtime.InteropServices.DefaultParameterValue ((null :&gt; obj))&gt;] ?Name: string * [&lt;System.Runtime.InteropServices.Optional; System.Runtime.InteropServices.DefaultParameterValue ((null :&gt; obj))&gt;] ?Showlegend: bool * [&lt;System.Runtime.InteropServices.Optional; System.Runtime.InteropServices.DefaultParameterValue ((null :&gt; obj))&gt;] ?MarkerSymbol: StyleParam.Symbol * [&lt;System.Runtime.InteropServices.Optional; System.Runtime.InteropServices.DefaultParameterValue ((null :&gt; obj))&gt;] ?Color: string * [&lt;System.Runtime.InteropServices.Optional; System.Runtime.InteropServices.DefaultParameterValue ((null :&gt; obj))&gt;] ?Opacity: float * [&lt;System.Runtime.InteropServices.Optional; System.Runtime.InteropServices.DefaultParameterValue ((null :&gt; obj))&gt;] ?Labels: #System.IConvertible seq * [&lt;System.Runtime.InteropServices.Optional; System.Runtime.InteropServices.DefaultParameterValue ((null :&gt; obj))&gt;] ?TextPosition: StyleParam.TextPosition * [&lt;System.Runtime.InteropServices.Optional; System.Runtime.InteropServices.DefaultParameterValue ((null :&gt; obj))&gt;] ?TextFont: Font * [&lt;System.Runtime.InteropServices.Optional; System.Runtime.InteropServices.DefaultParameterValue ((null :&gt; obj))&gt;] ?StackGroup: string * [&lt;System.Runtime.InteropServices.Optional; System.Runtime.InteropServices.DefaultParameterValue ((null :&gt; obj))&gt;] ?Orientation: StyleParam.Orientation * [&lt;System.Runtime.InteropServices.Optional; System.Runtime.InteropServices.DefaultParameterValue ((null :&gt; obj))&gt;] ?GroupNorm: StyleParam.GroupNorm * [&lt;System.Runtime.InteropServices.Optional; System.Runtime.InteropServices.DefaultParameterValue ((false :&gt; obj))&gt;] ?UseWebGL: bool -&gt; GenericChart.GenericChart</div>
+<div class="fsdocs-tip" id="fs6">module GenericChart
+
+from Plotly.NET<br /><em>&lt;summary&gt;
+ Module to represent a GenericChart
+&lt;/summary&gt;</em></div>
+<div class="fsdocs-tip" id="fs7">val toChartHTML: gChart: GenericChart.GenericChart -&gt; string<br /><em>&lt;summary&gt;
+ Converts a GenericChart to it HTML representation. The div layer has a default size of 600 if not specified otherwise.
+&lt;/summary&gt;</em></div>
+
+    </div>
+</main>
+<aside id="fsdocs-page-menu">
+    <p>On this page</p>
+    <ul>
+  <li class="level-1">
+    <a href="#Including-notebooks">
+      Including notebooks
+    </a>
+  </li>
+  <li class="level-2">
+    <a href="#Conditional-package-references">
+      Conditional package references
+    </a>
+  </li>
+  <li class="level-2">
+    <a href="#Conditional-value-inclusion">
+      Conditional value inclusion
+    </a>
+  </li>
+  <li class="level-2">
+    <a href="#Including-binder-links">
+      Including binder links
+    </a>
+  </li>
+</ul>
+</aside>
+<dialog>
+    <input type="search" placeholder="Search docs" />
+    <div class="results">
+        <ul></ul>
+        <p class="empty">Type something to start searching.</p>
+    </div>
+</dialog>
+<script type="module" src="https://fslab.org/docs-template/content/fsdocs-tips.js"></script>
+<script type="module" src="https://fslab.org/docs-template/content/fsdocs-theme-toggle.js"></script>
+<script type="module" src="https://fslab.org/docs-template/content/fsdocs-theme.js"></script>
+<script type="module" src="https://fslab.org/docs-template/content/fsdocs-search.js"></script>
+
+</body>
+</html>

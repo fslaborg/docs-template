@@ -1,9 +1,7 @@
 (**
-// can't yet format YamlFrontmatter (["title: F# code formatting example"; "category: sample content"; "categoryindex: 1"; "index: 2"], Some { StartLine = 2 StartColumn = 0 EndLine = 6 EndColumn = 8 }) to pynb markdown
-
-[![Binder](https://fslab.org/docs-template/img/badge-binder.svg)](https://mybinder.org/v2/gh/plotly/Plotly.NET/gh-pages?filepath=1_fsharp-code-example.ipynb)&emsp;
-[![Script](https://fslab.org/docs-template/img/badge-script.svg)](https://fslab.org/docs-template/1_fsharp-code-example.fsx)&emsp;
-[![Notebook](https://fslab.org/docs-template/img/badge-notebook.svg)](https://fslab.org/docs-template/1_fsharp-code-example.ipynb)
+[![Binder](https://fslab.org/docs-template/img/badge-binder.svg)](https://mybinder.org/v2/gh/plotly/Plotly.NET/gh-pages?filepath=fsharp-code-example.ipynb)&emsp;
+[![Script](https://fslab.org/docs-template/img/badge-script.svg)](https://fslab.org/docs-template/fsharp-code-example.fsx)&emsp;
+[![Notebook](https://fslab.org/docs-template/img/badge-notebook.svg)](https://fslab.org/docs-template/fsharp-code-example.ipynb)
 
 [How to add these badges?](https://fslab.org/docs-template/4_download-badges.html)
 
@@ -12,7 +10,6 @@
 This page is rendered from a F# script as input, containing real F# code besides this markdown section.
 
 hover above some bindings to get tooltips like in a real editor environment.
-
 
 *)
 ///this is comment

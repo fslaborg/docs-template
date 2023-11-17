@@ -1,13 +1,11 @@
 (**
-// can't yet format YamlFrontmatter (["title: Including notebooks"; "category: sample content"; "categoryindex: 1"; "index: 4"], Some { StartLine = 2 StartColumn = 0 EndLine = 6 EndColumn = 8 }) to pynb markdown
-
-[![Binder](https://fslab.org/docs-template/img/badge-binder.svg)](https://mybinder.org/v2/gh/plotly/Plotly.NET/gh-pages?filepath=3_notebooks.ipynb)&emsp;
-[![Script](https://fslab.org/docs-template/img/badge-script.svg)](https://fslab.org/docs-template/3_notebooks.fsx)&emsp;
-[![Notebook](https://fslab.org/docs-template/img/badge-notebook.svg)](https://fslab.org/docs-template/3_notebooks.ipynb)
+[![Binder](https://fslab.org/docs-template/img/badge-binder.svg)](https://mybinder.org/v2/gh/plotly/Plotly.NET/gh-pages?filepath=notebooks.ipynb)&emsp;
+[![Script](https://fslab.org/docs-template/img/badge-script.svg)](https://fslab.org/docs-template/notebooks.fsx)&emsp;
+[![Notebook](https://fslab.org/docs-template/img/badge-notebook.svg)](https://fslab.org/docs-template/notebooks.ipynb)
 
 [How to add these badges?](https://fslab.org/docs-template/4_download-badges.html)
 
-# Including notebooks 
+# Including notebooks
 
 To include dotnet interactive notebooks in the ipynb format, it is enough for the `_template.ipynb` file to simply exist.
 
@@ -15,10 +13,9 @@ There are however some customization options with fsdocs that move your document
 
 ## Conditional package references
 
-use the IPYNB compiler directive in conjuntion with `condition:ipynb` to include blocks only in the rendered notebook file. 
+use the IPYNB compiler directive in conjuntion with `condition:ipynb` to include blocks only in the rendered notebook file.
 
 This is especially usefull for referencing packages that otherwise be referenced locally during yopur buildchain:
-
 
 <pre>
 #r "/path/to/your/binaries/during/local/build"
@@ -31,12 +28,11 @@ This is especially usefull for referencing packages that otherwise be referenced
 
 ## Conditional value inclusion
 
-Sometimes the content you want to include might differ aswell. An example is Plotly.NET charts. 
-While you want to dump the chart html directly into the html docs via (`include-it-raw`), 
-you want to end cells in notebooks with the chart value itself to include the chart in the output cell with Plotly.NET.Interactive. 
+Sometimes the content you want to include might differ aswell. An example is Plotly.NET charts.
+While you want to dump the chart html directly into the html docs via (`include-it-raw`),
+you want to end cells in notebooks with the chart value itself to include the chart in the output cell with Plotly.NET.Interactive.
 
 Here is an example for such an conditional block:
-
 
 <pre>
 open Plotly.NET
@@ -57,29 +53,29 @@ myChart |> GenericChart.toChartHTML
 open Plotly.NET
 
 let myChart = Chart.Point([1.,2.])(* output: 
-<div id="e1516d97-a7bf-4003-a6de-0a145d44b2a2" style="width: 600px; height: 600px;"><!-- Plotly chart will be drawn inside this DIV --></div>
+<div id="ef3c30cf-dabb-4e28-a55b-168cfb725cd2" style="width: 600px; height: 600px;"><!-- Plotly chart will be drawn inside this DIV --></div>
 <script type="text/javascript">
 
-            var renderPlotly_e1516d97a7bf4003a6de0a145d44b2a2 = function() {
+            var renderPlotly_ef3c30cfdabb4e28a55b168cfb725cd2 = function() {
             var fsharpPlotlyRequire = requirejs.config({context:'fsharp-plotly',paths:{plotly:'https://cdn.plot.ly/plotly-latest.min'}}) || require;
             fsharpPlotlyRequire(['plotly'], function(Plotly) {
 
             var data = [{"type":"scatter","x":[1.0],"y":[2.0],"mode":"markers","marker":{}}];
             var layout = {};
             var config = {};
-            Plotly.newPlot('e1516d97-a7bf-4003-a6de-0a145d44b2a2', data, layout, config);
+            Plotly.newPlot('ef3c30cf-dabb-4e28-a55b-168cfb725cd2', data, layout, config);
 });
             };
             if ((typeof(requirejs) !==  typeof(Function)) || (typeof(requirejs.config) !== typeof(Function))) {
                 var script = document.createElement("script");
                 script.setAttribute("src", "https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js");
                 script.onload = function(){
-                    renderPlotly_e1516d97a7bf4003a6de0a145d44b2a2();
+                    renderPlotly_ef3c30cfdabb4e28a55b168cfb725cd2();
                 };
                 document.getElementsByTagName("head")[0].appendChild(script);
             }
             else {
-                renderPlotly_e1516d97a7bf4003a6de0a145d44b2a2();
+                renderPlotly_ef3c30cfdabb4e28a55b168cfb725cd2();
             }
 </script>
 *)
@@ -97,7 +93,6 @@ you can include a binder link like this (supposed you use gh-pages to host your 
 In fact, you can use this link here to check the conditionals of this very page in a notebook:
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/fslaborg/docs-template/gh-pages?filepath=3_notebooks.ipynb.ipynb)
-
 
 *)
 

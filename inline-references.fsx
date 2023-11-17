@@ -1,9 +1,7 @@
 (**
-// can't yet format YamlFrontmatter (["title: Inline package references and charting"; "category: sample content"; "categoryindex: 1"; "index: 3"], Some { StartLine = 2 StartColumn = 0 EndLine = 6 EndColumn = 8 }) to pynb markdown
-
-[![Binder](https://fslab.org/docs-template/img/badge-binder.svg)](https://mybinder.org/v2/gh/plotly/Plotly.NET/gh-pages?filepath=2_inline-references.ipynb)&emsp;
-[![Script](https://fslab.org/docs-template/img/badge-script.svg)](https://fslab.org/docs-template/2_inline-references.fsx)&emsp;
-[![Notebook](https://fslab.org/docs-template/img/badge-notebook.svg)](https://fslab.org/docs-template/2_inline-references.ipynb)
+[![Binder](https://fslab.org/docs-template/img/badge-binder.svg)](https://mybinder.org/v2/gh/plotly/Plotly.NET/gh-pages?filepath=inline-references.ipynb)&emsp;
+[![Script](https://fslab.org/docs-template/img/badge-script.svg)](https://fslab.org/docs-template/inline-references.fsx)&emsp;
+[![Notebook](https://fslab.org/docs-template/img/badge-notebook.svg)](https://fslab.org/docs-template/inline-references.ipynb)
 
 [How to add these badges?](https://fslab.org/docs-template/4_download-badges.html)
 
@@ -28,10 +26,9 @@ let myChart =
 (**
 You can now also include raw html in your docs scripts with the new `include-it-raw`.
 To incude the chart html of a Plotly.NET chart and and render it on the docs page, use the `GenericChart.toChartHTML`
-and include the raw output. 
+and include the raw output.
 
 the actual codeblock looks like this:
-
 
 <pre>
 (***hide***)
@@ -42,29 +39,29 @@ myChart |> GenericChart.toChartHTML
 
 Here is the rendered chart:
 
-<div id="fd2de5bf-8a45-4c38-8c8b-f73b611b8df0" style="width: 600px; height: 600px;"><!-- Plotly chart will be drawn inside this DIV --></div>
+<div id="12a45aea-2bc9-453d-b9ae-934a2da1fb30" style="width: 600px; height: 600px;"><!-- Plotly chart will be drawn inside this DIV --></div>
 <script type="text/javascript">
 
-            var renderPlotly_fd2de5bf8a454c388c8bf73b611b8df0 = function() {
+            var renderPlotly_12a45aea2bc9453db9ae934a2da1fb30 = function() {
             var fsharpPlotlyRequire = requirejs.config({context:'fsharp-plotly',paths:{plotly:'https://cdn.plot.ly/plotly-latest.min'}}) || require;
             fsharpPlotlyRequire(['plotly'], function(Plotly) {
 
             var data = [{"type":"scatter","x":[1.0,5.0,23.0],"y":[1.0,6.0,9.0],"mode":"lines","line":{},"marker":{}}];
             var layout = {"title":"Hello fsdocs!"};
             var config = {};
-            Plotly.newPlot('fd2de5bf-8a45-4c38-8c8b-f73b611b8df0', data, layout, config);
+            Plotly.newPlot('12a45aea-2bc9-453d-b9ae-934a2da1fb30', data, layout, config);
 });
             };
             if ((typeof(requirejs) !==  typeof(Function)) || (typeof(requirejs.config) !== typeof(Function))) {
                 var script = document.createElement("script");
                 script.setAttribute("src", "https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js");
                 script.onload = function(){
-                    renderPlotly_fd2de5bf8a454c388c8bf73b611b8df0();
+                    renderPlotly_12a45aea2bc9453db9ae934a2da1fb30();
                 };
                 document.getElementsByTagName("head")[0].appendChild(script);
             }
             else {
-                renderPlotly_fd2de5bf8a454c388c8bf73b611b8df0();
+                renderPlotly_12a45aea2bc9453db9ae934a2da1fb30();
             }
 </script>
 
