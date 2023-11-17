@@ -1,0 +1,77 @@
+:root {
+
+    /* fslab colors */
+    --fslab-magenta: #A00975;
+    --fslab-magenta-light: #F99BDE;
+    --fslab-magenta-dark: #3D1244;
+    --fslab-magenta-darkest: #200117;;
+    --fslab-blue: #438AFE;
+    --fslab-yellow: #FABC2A;
+
+    /* light theme */
+    --primary: var(--fslab-magenta);
+    --background: #f5f5f6;
+    --text-color: var(--fslab-magenta-darkest);
+    --text-hover: #282828;
+    --heading-color: var(--fslab-magenta-dark);
+    --code-background: #ffffff;
+    --code-color: var(--fslab-magenta);
+    --header-background: #f9fbfc;
+    --header-border: var(--fslab-magenta);
+    --mobile-menu-background: var(--header-background);
+    --menu-item-hover-background: #eff0f1;
+    --doc-tip-background: #F7F7F7;
+    --link-color: var(--fslab-blue);
+    --link-hover: #91aafa;
+    --search-background: rgb(229, 231, 235);
+    --nav-category: rgb(156, 163, 175);
+    --scrollbar-track-background: #424242;
+    --scrollbar-track-border: #4A4A4A;
+    --scrollbar-thumb-background: #686868;
+    --shadow-color: hsla(0, 0%, 0%, .1);
+    --main-shadow-color: hsla(0, 0%, 0%, .025);
+    --aside-background: var(--header-background);
+    --menu-color: var(--text-color);
+    --fsdocs-theme-toggle-light-color: var(--text-color);
+    --fsdocs-theme-toggle-dark-color: #FFF;
+    --header-link-color: var(--text-color);
+
+    --header-brand-text-transform: none;
+
+    --code-strings-color: #0093A1;
+    --code-printf-color: #6B2FBA;
+    --code-escaped-color: #EA8675;
+    --code-identifiers-color: #6B2FBA;
+    --code-module-color: #009999;
+    --code-reference-color: #4974D1;
+    --code-value-color: #1B6600;
+    --code-interface-color: #43AEC6;
+    --code-typearg-color: #43AEC6;
+    --code-disposable-color: #43AEC6;
+    --code-property-color: #43AEC6;
+    --code-punctuation-color: #43AEC6;
+    --code-punctuation2-color: var(--text-color);
+    --code-function-color: #6B2FBA;
+    --code-function2-color: #6B2FBA;
+    --code-activepattern-color: #4ec9b0;
+    --code-unioncase-color: #4ec9b0;
+    --code-enumeration-color: #8C6C41;
+    --code-keywords-color: #0F54D6;
+    --code-comment-color: #707070;
+    --code-operators-color: #0F54D6;
+    --code-numbers-color: #009999;
+    --code-linenumbers-color: #80b0b0;
+    --code-mutable-color: #1b6600;
+    --code-inactive-color: #808080;
+    --code-preprocessor-color: #af75c1;
+    --code-fsioutput-color: #808080;
+    --code-tooltip-color: #d1d1d1;
+}
+
+.pre {
+    border: 1px solid var(--fslab-magenta);
+}
+
+[data-theme="dark"] {
+    --primary: var(--fslab-magenta);
+}

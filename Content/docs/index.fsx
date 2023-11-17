@@ -1,11 +1,8 @@
 (**
 # The fslab documentation template
 
-This template scaffolds the necessary folder structure for FSharp.Formatting 
+This template scaffolds the necessary folder structure for documentation with FSharp.Formatting and it's `fsdocs` tool,
 and adds custom styles in the **fslab** theme. 
-
-The provided stylesheet was compiled from sass (before uploading the nuget package) and
-uses the [Bulma](https://bulma.io/) CSS framework instead of bootstrap which is used by FSharp.Formatting per default.
 
 #### Table of contents 
 
@@ -47,16 +44,15 @@ The default template initializes the following folder structure when you initial
 
 See [further below](#Customization-options) for command line customization options of the template.
 
-<pre>
+```no-highlight
 docs
 │   index.fsx
 │   _template.html
-|   _template.ipynb
-|   
-│   0_Markdown-Cheatsheet.md
-│   1_fsharp-code-example.fsx
-│   2_inline-references.fsx
-│   3_notebooks.fsx
+│   _template.ipynb
+│
+│   fsharp-code-example.fsx
+│   inline-references.fsx
+│   notebooks.fsx
 |
 ├───content
 │   fsdocs-custom.css
@@ -67,7 +63,7 @@ docs
 │
 └───reference
         _template.html
-</pre>
+```
 
 - `index.fsx` is the file you are reading just now. It contains the very content you are reading at the moment 
 in a markdown block indicated by `(** *)` guards. It will be rendered as the root `index.html` file of your documentation.
