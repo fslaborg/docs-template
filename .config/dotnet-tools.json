@@ -2,20 +2,8 @@
   "version": 1,
   "isRoot": true,
   "tools": {
-    "fake-cli": {
-      "version": "5.20.4",
-      "commands": [
-        "fake"
-      ]
-    },
-    "excubo.webcompiler": {
-      "version": "2.7.14",
-      "commands": [
-        "webcompiler"
-      ]
-    },
-    "fsharp.formatting.commandtool": {
-      "version": "11.4.0",
+    "fsdocs-tool": {
+      "version": "20.0.0-alpha-010",
       "commands": [
         "fsdocs"
       ]

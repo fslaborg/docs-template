@@ -13,18 +13,28 @@ This is intended as a quick reference and showcase. For more complete info, see 
 
 ### Table of Contents  
 
-- [Headers](#Headers)  
-- [Emphasis](#Emphasis)  
-- [Lists](#Lists)  
-- [Links](#Links)  
-- [Images](#Images)  
-- [Code and Syntax Highlighting](#Code-and-Syntax-Highlighting)  
-- [Tables](#Tables)
-- [Blockquotes](#Blockquotes)  
-- [Inline HTML](#Inline-HTML)  
-- [Horizontal Rule](#Horizontal-Rule)  
-- [Line Breaks](#Line-Breaks)  
-- [YouTube Videos](#YouTube-Videos)  
+- [Markdown cheatsheet](#markdown-cheatsheet)
+    - [Table of Contents](#table-of-contents)
+  - [Headers](#headers)
+- [H1](#h1)
+  - [H2](#h2)
+    - [H3](#h3)
+      - [H4](#h4)
+        - [H5](#h5)
+          - [H6](#h6)
+- [Alt-H1](#alt-h1)
+  - [Alt-H2](#alt-h2)
+  - [Emphasis](#emphasis)
+  - [Lists](#lists)
+  - [Links](#links)
+  - [Images](#images)
+  - [Code and Syntax Highlighting](#code-and-syntax-highlighting)
+  - [Tables](#tables)
+  - [Blockquotes](#blockquotes)
+  - [Inline HTML](#inline-html)
+  - [Horizontal Rule](#horizontal-rule)
+  - [Line Breaks](#line-breaks)
+  - [YouTube Videos](#youtube-videos)
 
 ## Headers
 
@@ -188,11 +198,6 @@ Here's our logo (hover to see the title text):
 
 Inline-style: 
 ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-
-Reference-style: 
-![alt text][logo]
-
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
 
 ## Code and Syntax Highlighting
 
